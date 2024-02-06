@@ -1,8 +1,10 @@
 package com.isaac.taskmanagementapi.controller;
 
+import com.isaac.taskmanagementapi.dto.ForgetPasswordRequest;
 import com.isaac.taskmanagementapi.dto.SignInRequest;
 import com.isaac.taskmanagementapi.dto.SignUpUserRequest;
 import com.isaac.taskmanagementapi.service.AuthService;
+import com.isaac.taskmanagementapi.service.ForgetPasswordPasswordService;
 import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
@@ -15,19 +17,27 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("/api/v1/auth")
 public class AuthController {
     private final AuthService authService;
+    private final ForgetPasswordPasswordService forgetPasswordPasswordService;
 
     @Autowired
-    public AuthController(AuthService authService) {
+    public AuthController(AuthService authService,
+                          ForgetPasswordPasswordService forgetPasswordPasswordService) {
         this.authService = authService;
+        this.forgetPasswordPasswordService = forgetPasswordPasswordService;
     }
 
-    @PostMapping("/signup")
+    @PostMapping("/sign-up")
     public ResponseEntity<Object> signUp(@Valid @RequestBody SignUpUserRequest user ) {
         return ResponseEntity.status(201).body(authService.signUp(user));
     }
 
-    @PostMapping("/signin")
+    @PostMapping("/sign-in")
     public ResponseEntity<Object> signIn(@Valid @RequestBody SignInRequest user) {
         return ResponseEntity.ok().body(authService.signIn(user));
+    }
+
+    @PostMapping("/forgot-password")
+    public ResponseEntity<Object> forgotPassword(@Valid @RequestBody ForgetPasswordRequest request) {
+        return ResponseEntity.ok().body(forgetPasswordPasswordService.forgotPassword(request));
     }
 }
