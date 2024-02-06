@@ -35,6 +35,7 @@ public class AuthService {
         User newUser = User.builder()
                 .email(user.getEmail())
                 .password(user.getPassword())
+                .name(user.getName())
                 .build();
         return userRepository.save(newUser);
     }
