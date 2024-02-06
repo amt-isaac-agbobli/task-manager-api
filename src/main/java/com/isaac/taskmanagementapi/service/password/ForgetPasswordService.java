@@ -7,7 +7,7 @@ import com.isaac.taskmanagementapi.exception.HttpException;
 import com.isaac.taskmanagementapi.repository.PasswordRepository;
 import com.isaac.taskmanagementapi.repository.UserRepository;
 import com.isaac.taskmanagementapi.service.password.interfaces.IForgetPasswordService;
-import com.isaac.taskmanagementapi.util.email.EmailService;
+import com.isaac.taskmanagementapi.util.email.interfaces.EmailService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;

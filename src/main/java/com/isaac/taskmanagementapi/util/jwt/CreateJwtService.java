@@ -3,6 +3,7 @@ package com.isaac.taskmanagementapi.util.jwt;
 import com.auth0.jwt.JWT;
 import com.auth0.jwt.algorithms.Algorithm;
 import com.isaac.taskmanagementapi.entity.User;
+import com.isaac.taskmanagementapi.util.jwt.interfaces.ICreateJwtService;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 
@@ -11,7 +12,7 @@ import java.time.LocalDateTime;
 import java.time.ZoneOffset;
 
 @Component
-public class CreateJWTService {
+public class CreateJwtService implements ICreateJwtService {
     @Value("${api.security.token.secret}")
     private String secret;
 
