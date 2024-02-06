@@ -1,5 +1,6 @@
 package com.isaac.taskmanagementapi.entity;
 
+import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
@@ -24,13 +25,10 @@ import java.util.List;
 public class User implements UserDetails {
     @Id
     int id;
-
-    @NotBlank(message = "Email is required")
-    @Email(message = "Invalid email")
+    @Column(unique = true, nullable = false)
     String email;
 
-    @NotBlank(message = "Password is required")
-    @Length(min = 6, message = "Password must be at least 6 characters")
+    @Column(nullable = false)
     String password;
 
     @Override
