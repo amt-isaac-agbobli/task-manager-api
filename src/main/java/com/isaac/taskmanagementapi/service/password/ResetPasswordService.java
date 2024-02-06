@@ -10,7 +10,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
-import org.springframework.transaction.annotation.Transactional;
 
 import java.util.Date;
 import java.util.Map;
@@ -69,7 +68,7 @@ public class ResetPasswordService {
         user.setPassword(passwordEncoder.encode(password));
         userRepository.save(user);
     }
-    @Transactional
+
     protected   void deleteUserTokenById(int id) {
         passwordRepository.deleteById(id);
     }
