@@ -1,9 +1,6 @@
 package com.isaac.taskmanagementapi.entity;
 
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
 import lombok.*;
 
 import java.util.Date;
@@ -18,6 +15,7 @@ import java.util.Date;
 @Table(name = "reset_password_token")
 public class ResetPasswordToken {
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
 
     @Column( nullable = false, unique = true)

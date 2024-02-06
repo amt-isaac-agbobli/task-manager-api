@@ -1,4 +1,4 @@
-package com.isaac.taskmanagementapi.config;
+package com.isaac.taskmanagementapi.config.security;
 
 import com.isaac.taskmanagementapi.config.filter.JwtRequestFilter;
 import org.springframework.context.annotation.Bean;
