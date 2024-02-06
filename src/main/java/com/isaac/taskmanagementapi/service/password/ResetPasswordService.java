@@ -6,6 +6,7 @@ import com.isaac.taskmanagementapi.entity.User;
 import com.isaac.taskmanagementapi.exception.HttpException;
 import com.isaac.taskmanagementapi.repository.PasswordRepository;
 import com.isaac.taskmanagementapi.repository.UserRepository;
+import com.isaac.taskmanagementapi.service.password.interfaces.IResetPasswordService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.security.crypto.password.PasswordEncoder;
@@ -15,7 +16,7 @@ import java.util.Date;
 import java.util.Map;
 
 @Service
-public class ResetPasswordService {
+public class ResetPasswordService implements IResetPasswordService {
     private final PasswordRepository passwordRepository;
     private final UserRepository userRepository;
     private final PasswordEncoder passwordEncoder;

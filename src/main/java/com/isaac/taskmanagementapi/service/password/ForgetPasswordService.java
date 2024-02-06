@@ -6,6 +6,7 @@ import com.isaac.taskmanagementapi.entity.User;
 import com.isaac.taskmanagementapi.exception.HttpException;
 import com.isaac.taskmanagementapi.repository.PasswordRepository;
 import com.isaac.taskmanagementapi.repository.UserRepository;
+import com.isaac.taskmanagementapi.service.password.interfaces.IForgetPasswordService;
 import com.isaac.taskmanagementapi.util.email.EmailService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -18,7 +19,7 @@ import java.util.Map;
 import java.util.UUID;
 
 @Service
-public class ForgetPasswordService {
+public class ForgetPasswordService implements IForgetPasswordService {
     private final PasswordRepository passwordRepository;
     private final UserRepository userRepository;
     private final EmailService emailService;
