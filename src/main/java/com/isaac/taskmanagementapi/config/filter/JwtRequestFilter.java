@@ -38,7 +38,7 @@ public class JwtRequestFilter extends OncePerRequestFilter {
 
         String authorizationHeader = request.getHeader("Authorization");
 
-        if (authorizationHeader.isBlank() || !authorizationHeader.startsWith("Bearer ")) {
+        if (authorizationHeader == null || authorizationHeader.isBlank() || !authorizationHeader.startsWith("Bearer ")) {
             throw new HttpException("HTTP header is required", HttpStatus.UNAUTHORIZED);
         }
 
