@@ -3,29 +3,31 @@ package com.isaac.taskmanagementapi.controller;
 import com.isaac.taskmanagementapi.dto.password.ForgetPasswordRequest;
 import com.isaac.taskmanagementapi.dto.auth.SignInRequest;
 import com.isaac.taskmanagementapi.dto.auth.SignUpUserRequest;
+import com.isaac.taskmanagementapi.dto.password.ResetPasswordRequest;
 import com.isaac.taskmanagementapi.service.auth.AuthService;
-import com.isaac.taskmanagementapi.service.password.ForgetPasswordPasswordService;
+import com.isaac.taskmanagementapi.service.password.ForgetPasswordService;
+import com.isaac.taskmanagementapi.service.password.ResetPasswordService;
 import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/api/v1/auth")
 public class AuthController {
     private final AuthService authService;
-    private final ForgetPasswordPasswordService forgetPasswordPasswordService;
+    private final ForgetPasswordService forgetPasswordService;
+    private final ResetPasswordService resetPasswordService;
 
 
 
     @Autowired
     public AuthController(AuthService authService,
-                          ForgetPasswordPasswordService forgetPasswordPasswordService) {
+                          ForgetPasswordService forgetPasswordService,
+                          ResetPasswordService resetPasswordService) {
         this.authService = authService;
-        this.forgetPasswordPasswordService = forgetPasswordPasswordService;
+        this.forgetPasswordService = forgetPasswordService;
+        this.resetPasswordService = resetPasswordService;
     }
 
     @PostMapping("/sign-up")
@@ -40,6 +42,12 @@ public class AuthController {
 
     @PostMapping("/forgot-password")
     public ResponseEntity<Object> forgotPassword(@Valid @RequestBody ForgetPasswordRequest request) {
-        return ResponseEntity.ok().body(forgetPasswordPasswordService.forgotPassword(request));
+        return ResponseEntity.ok().body(forgetPasswordService.forgotPassword(request));
+    }
+
+    @PostMapping("/reset-password")
+    public ResponseEntity<Object> resetPassword(@RequestParam("token") String token,
+                                                @Valid @RequestBody ResetPasswordRequest request) {
+        return ResponseEntity.ok().body(resetPasswordService.resetPassword(token, request));
     }
 }

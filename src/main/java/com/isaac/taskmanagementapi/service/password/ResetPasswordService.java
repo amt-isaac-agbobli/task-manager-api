@@ -10,6 +10,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.Date;
 import java.util.Map;
@@ -35,6 +36,7 @@ public class ResetPasswordService {
         validateTokenExpiry(resetPasswordToken);
         User user = findUserByEmail(resetPasswordToken.getEmail());
         updateUserPassword(user, resetPasswordRequest.getPassword());
+        deleteUserTokenById(resetPasswordToken.getId());
         return Map.of("message", "Password reset successfully");
     }
 
@@ -66,5 +68,9 @@ public class ResetPasswordService {
     private void updateUserPassword(User user, String password) {
         user.setPassword(passwordEncoder.encode(password));
         userRepository.save(user);
+    }
+    @Transactional
+    protected   void deleteUserTokenById(int id) {
+        passwordRepository.deleteById(id);
     }
 }

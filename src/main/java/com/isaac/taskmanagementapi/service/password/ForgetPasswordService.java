@@ -18,14 +18,14 @@ import java.util.Map;
 import java.util.UUID;
 
 @Service
-public class ForgetPasswordPasswordService {
+public class ForgetPasswordService {
     private final PasswordRepository passwordRepository;
     private final UserRepository userRepository;
     private final EmailService emailService;
     @Autowired
-    public ForgetPasswordPasswordService(PasswordRepository passwordRepository,
-                                         EmailService emailService,
-                                         UserRepository userRepository) {
+    public ForgetPasswordService(PasswordRepository passwordRepository,
+                                 EmailService emailService,
+                                 UserRepository userRepository) {
         this.passwordRepository = passwordRepository;
         this.emailService = emailService;
         this.userRepository = userRepository;
