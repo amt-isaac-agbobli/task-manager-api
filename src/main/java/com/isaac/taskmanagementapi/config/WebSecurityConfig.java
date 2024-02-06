@@ -1,5 +1,6 @@
 package com.isaac.taskmanagementapi.config;
 
+import com.isaac.taskmanagementapi.config.filter.JwtRequestFilter;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.http.HttpMethod;
