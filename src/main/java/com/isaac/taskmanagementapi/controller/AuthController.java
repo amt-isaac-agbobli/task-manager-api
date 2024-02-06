@@ -1,5 +1,6 @@
 package com.isaac.taskmanagementapi.controller;
 
+import com.isaac.taskmanagementapi.dto.SignInRequest;
 import com.isaac.taskmanagementapi.dto.SignUpUserRequest;
 import com.isaac.taskmanagementapi.service.AuthService;
 import jakarta.validation.Valid;
@@ -23,5 +24,10 @@ public class AuthController {
     @PostMapping("/signup")
     public ResponseEntity<Object> signUp(@Valid @RequestBody SignUpUserRequest user ) {
         return ResponseEntity.status(201).body(authService.signUp(user));
+    }
+
+    @PostMapping("/signin")
+    public ResponseEntity<Object> signIn(@Valid @RequestBody SignInRequest user) {
+        return ResponseEntity.ok().body(authService.signIn(user));
     }
 }
