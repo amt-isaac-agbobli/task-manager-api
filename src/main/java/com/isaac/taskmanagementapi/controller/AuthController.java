@@ -1,10 +1,10 @@
 package com.isaac.taskmanagementapi.controller;
 
-import com.isaac.taskmanagementapi.dto.ForgetPasswordRequest;
-import com.isaac.taskmanagementapi.dto.SignInRequest;
-import com.isaac.taskmanagementapi.dto.SignUpUserRequest;
-import com.isaac.taskmanagementapi.service.AuthService;
-import com.isaac.taskmanagementapi.service.ForgetPasswordPasswordService;
+import com.isaac.taskmanagementapi.dto.password.ForgetPasswordRequest;
+import com.isaac.taskmanagementapi.dto.auth.SignInRequest;
+import com.isaac.taskmanagementapi.dto.auth.SignUpUserRequest;
+import com.isaac.taskmanagementapi.service.auth.AuthService;
+import com.isaac.taskmanagementapi.service.password.ForgetPasswordPasswordService;
 import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;

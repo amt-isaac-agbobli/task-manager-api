@@ -1,6 +1,6 @@
-package com.isaac.taskmanagementapi.service;
+package com.isaac.taskmanagementapi.service.user;
 
-import com.isaac.taskmanagementapi.dto.UpdatePasswordRequest;
+import com.isaac.taskmanagementapi.dto.password.UpdatePasswordRequest;
 import com.isaac.taskmanagementapi.entity.User;
 import com.isaac.taskmanagementapi.exception.HttpException;
 import com.isaac.taskmanagementapi.repository.UserRepository;

@@ -1,12 +1,12 @@
-package com.isaac.taskmanagementapi.service;
+package com.isaac.taskmanagementapi.service.password;
 
-import com.isaac.taskmanagementapi.dto.ForgetPasswordRequest;
+import com.isaac.taskmanagementapi.dto.password.ForgetPasswordRequest;
 import com.isaac.taskmanagementapi.entity.ResetPasswordToken;
 import com.isaac.taskmanagementapi.entity.User;
 import com.isaac.taskmanagementapi.exception.HttpException;
 import com.isaac.taskmanagementapi.repository.PasswordRepository;
 import com.isaac.taskmanagementapi.repository.UserRepository;
-import com.isaac.taskmanagementapi.util.EmailService;
+import com.isaac.taskmanagementapi.util.email.EmailService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;

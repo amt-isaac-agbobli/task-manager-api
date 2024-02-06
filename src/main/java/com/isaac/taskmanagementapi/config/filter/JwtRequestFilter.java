@@ -2,8 +2,8 @@ package com.isaac.taskmanagementapi.config.filter;
 
 import com.isaac.taskmanagementapi.entity.User;
 import com.isaac.taskmanagementapi.exception.HttpException;
-import com.isaac.taskmanagementapi.service.UserService;
-import com.isaac.taskmanagementapi.util.GetJwtSubjectService;
+import com.isaac.taskmanagementapi.service.user.UserService;
+import com.isaac.taskmanagementapi.util.jwt.GetJwtSubjectService;
 import jakarta.servlet.FilterChain;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServletRequest;

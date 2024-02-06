@@ -1,4 +1,4 @@
-package com.isaac.taskmanagementapi.util;
+package com.isaac.taskmanagementapi.util.jwt;
 
 import com.auth0.jwt.JWT;
 import com.auth0.jwt.algorithms.Algorithm;

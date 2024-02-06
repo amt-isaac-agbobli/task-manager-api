@@ -1,8 +1,8 @@
 package com.isaac.taskmanagementapi.controller;
 
-import com.isaac.taskmanagementapi.dto.UpdatePasswordRequest;
+import com.isaac.taskmanagementapi.dto.password.UpdatePasswordRequest;
 import com.isaac.taskmanagementapi.entity.User;
-import com.isaac.taskmanagementapi.service.UserService;
+import com.isaac.taskmanagementapi.service.user.UserService;
 import io.swagger.v3.oas.annotations.security.SecurityRequirement;
 import jakarta.validation.Valid;
 import org.springframework.http.ResponseEntity;

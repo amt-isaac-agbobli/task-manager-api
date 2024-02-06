@@ -1,4 +1,4 @@
-package com.isaac.taskmanagementapi.dto;
+package com.isaac.taskmanagementapi.dto.auth;
 
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotBlank;

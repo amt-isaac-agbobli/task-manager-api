@@ -1,5 +1,6 @@
-package com.isaac.taskmanagementapi.util;
+package com.isaac.taskmanagementapi.util.email;
 
+import com.isaac.taskmanagementapi.util.email.EmailService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.mail.SimpleMailMessage;
 import org.springframework.mail.javamail.JavaMailSender;

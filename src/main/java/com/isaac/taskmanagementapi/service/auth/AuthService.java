@@ -1,11 +1,12 @@
-package com.isaac.taskmanagementapi.service;
+package com.isaac.taskmanagementapi.service.auth;
 
-import com.isaac.taskmanagementapi.dto.SignInRequest;
-import com.isaac.taskmanagementapi.dto.SignUpUserRequest;
+import com.isaac.taskmanagementapi.dto.auth.SignInRequest;
+import com.isaac.taskmanagementapi.dto.auth.SignUpUserRequest;
 import com.isaac.taskmanagementapi.entity.User;
 import com.isaac.taskmanagementapi.exception.HttpException;
 import com.isaac.taskmanagementapi.repository.UserRepository;
-import com.isaac.taskmanagementapi.util.CreateJWTService;
+import com.isaac.taskmanagementapi.service.user.UserService;
+import com.isaac.taskmanagementapi.util.jwt.CreateJWTService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.security.crypto.password.PasswordEncoder;
