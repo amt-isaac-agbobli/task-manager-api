@@ -1,6 +1,7 @@
 package com.isaac.taskmanagementapi.config.filter;
 
 import com.isaac.taskmanagementapi.entity.User;
+import com.isaac.taskmanagementapi.exception.HttpException;
 import com.isaac.taskmanagementapi.service.UserService;
 import com.isaac.taskmanagementapi.util.JwtTokenUtil;
 import jakarta.servlet.FilterChain;
@@ -8,6 +9,7 @@ import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
@@ -37,8 +39,7 @@ public class JwtRequestFilter extends OncePerRequestFilter {
         String authorizationHeader = request.getHeader("Authorization");
 
         if (authorizationHeader.isBlank() || !authorizationHeader.startsWith("Bearer ")) {
-            //throw new AuthenticationException("Authorization token is null or invalid");
-            System.out.println("Authorization token is null or invalid");
+            throw new HttpException("HTTP header is required", HttpStatus.UNAUTHORIZED);
         }
 
         String token = authorizationHeader.replace("Bearer ", "").trim();
@@ -61,7 +62,7 @@ public class JwtRequestFilter extends OncePerRequestFilter {
     }
 
     private static final String[] excluded_urls = {
-            "/api/auth",
+            "/api/v1/auth",
             "/v3/api-docs",
             "/swagger-ui"
     };

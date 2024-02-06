@@ -31,7 +31,7 @@ public class WebSecurityConfig {
         return   http.csrf(AbstractHttpConfigurer::disable)
                 .sessionManagement(sm -> sm.sessionCreationPolicy(SessionCreationPolicy.STATELESS))
                 .authorizeHttpRequests(req -> {
-                    req.requestMatchers(HttpMethod.POST, "/api/auth/*").permitAll();
+                    req.requestMatchers(HttpMethod.POST, "/api/v1/auth/*").permitAll();
                     req.requestMatchers("/v3/api-docs/**").permitAll();
                     req.requestMatchers( "/swagger-ui/*").permitAll();
                     req.anyRequest().authenticated();
