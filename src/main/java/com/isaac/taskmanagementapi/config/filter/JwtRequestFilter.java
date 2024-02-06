@@ -3,7 +3,7 @@ package com.isaac.taskmanagementapi.config.filter;
 import com.isaac.taskmanagementapi.entity.User;
 import com.isaac.taskmanagementapi.exception.HttpException;
 import com.isaac.taskmanagementapi.service.UserService;
-import com.isaac.taskmanagementapi.util.JwtTokenUtil;
+import com.isaac.taskmanagementapi.util.GetJwtSubjectService;
 import jakarta.servlet.FilterChain;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServletRequest;
@@ -24,12 +24,12 @@ public class JwtRequestFilter extends OncePerRequestFilter {
 
     private final UserService userService;
 
-    private final JwtTokenUtil jwtTokenUtil;
+    private final GetJwtSubjectService getJwtSubjectService;
 
     @Autowired
-    public JwtRequestFilter(UserService userService, JwtTokenUtil jwtTokenUtil) {
+    public JwtRequestFilter(UserService userService, GetJwtSubjectService getJwtSubjectService) {
         this.userService = userService;
-        this.jwtTokenUtil = jwtTokenUtil;
+        this.getJwtSubjectService = getJwtSubjectService;
     }
 
     @Override
@@ -44,7 +44,7 @@ public class JwtRequestFilter extends OncePerRequestFilter {
 
         String token = authorizationHeader.replace("Bearer ", "").trim();
 
-        String tokenSubject = jwtTokenUtil.getUsernameFromToken(token);
+        String tokenSubject = this.getJwtSubjectService.execute(token);
 
         User authenticatedUser = (User) userService.getUserByEmail(tokenSubject);
 

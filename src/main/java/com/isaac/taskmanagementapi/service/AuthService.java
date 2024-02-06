@@ -5,7 +5,7 @@ import com.isaac.taskmanagementapi.dto.SignUpUserRequest;
 import com.isaac.taskmanagementapi.entity.User;
 import com.isaac.taskmanagementapi.exception.HttpException;
 import com.isaac.taskmanagementapi.repository.UserRepository;
-import com.isaac.taskmanagementapi.util.JwtTokenUtil;
+import com.isaac.taskmanagementapi.util.CreateJWTService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.security.crypto.password.PasswordEncoder;
@@ -19,21 +19,21 @@ public class AuthService {
     private final UserRepository userRepository;
     private final PasswordEncoder passwordEncoder;
 
-    private final JwtTokenUtil jwtTokenUtil;
+    private final CreateJWTService createJWTService;
 
     @Autowired
     public AuthService(UserService userService,
                        UserRepository userRepository,
                        PasswordEncoder passwordEncoder,
-                       JwtTokenUtil jwtTokenUtil) {
+                       CreateJWTService createJWTService) {
         this.userService = userService;
         this.userRepository = userRepository;
         this.passwordEncoder = passwordEncoder;
-        this.jwtTokenUtil = jwtTokenUtil;
+        this.createJWTService = createJWTService;
 
     }
 
-    public User signUp(SignUpUserRequest user) {
+    public Object signUp(SignUpUserRequest user) {
         User userExists = userRepository.findByEmail(user.getEmail());
         if (userExists != null) {
             throw new HttpException("User already exists", HttpStatus.CONFLICT);
@@ -45,7 +45,10 @@ public class AuthService {
                 .password(user.getPassword())
                 .name(user.getName())
                 .build();
-        return userRepository.save(newUser);
+        User userCreated = userRepository.save(newUser);
+
+        userCreated.setPassword(null);
+        return userCreated;
     }
 
     public Object signIn(SignInRequest user) {
@@ -57,7 +60,7 @@ public class AuthService {
         if (!passwordMatch) {
             throw new HttpException("Invalid credentials", HttpStatus.UNAUTHORIZED);
         }
-        String token = jwtTokenUtil.generateToken(userExists);
+        String token = createJWTService.execute(userExists);
 
         return Map.of("token", token);
     }
