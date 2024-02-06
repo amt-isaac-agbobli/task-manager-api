@@ -1,2 +1,8 @@
-package com.isaac.taskmanagementapi.service;public class PasswordService {
+package com.isaac.taskmanagementapi.service;
+
+import org.springframework.stereotype.Service;
+
+@Service
+public class PasswordService {
+
 }
