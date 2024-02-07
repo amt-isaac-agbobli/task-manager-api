@@ -54,7 +54,8 @@ public class ResetPasswordServiceTest {
         ResetPasswordRequest request = new ResetPasswordRequest();
         request.setPassword("newPassword");
 
-        Map<String, String> response = (Map<String, String>) resetPasswordService.resetPassword("validToken", request);
+        Map<String, String> response = (Map<String, String>) resetPasswordService
+                .resetPassword("validToken", request);
 
         assertEquals("Password reset successfully", response.get("message"));
         verify(passwordRepository, times(1)).deleteById(anyInt());
