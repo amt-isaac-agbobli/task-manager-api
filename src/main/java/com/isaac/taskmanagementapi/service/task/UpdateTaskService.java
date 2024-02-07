@@ -1,4 +1,4 @@
-package com.isaac.taskmanagementapi.service.task.interfaces;
+package com.isaac.taskmanagementapi.service.task;
 
 import com.isaac.taskmanagementapi.dto.Task.UpdateTaskRequest;
 import com.isaac.taskmanagementapi.entity.Task;

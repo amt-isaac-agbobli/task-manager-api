@@ -22,5 +22,5 @@ public class UpdateTaskRequest {
     private String description;
 
     private LocalDate dueDate;
-    
+
 }
