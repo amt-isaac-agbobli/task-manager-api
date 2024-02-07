@@ -80,6 +80,13 @@ public class TaskController {
         return ResponseEntity.ok().body(getTaskService.getTasksAssignedToUser(user, pageable));
     }
 
+    @GetMapping("/{id}")
+    @Operation(description = "Get a task by id")
+    public ResponseEntity<Object> getTaskById(@Valid @PathVariable("id") int id) {
+        User user = authenticatedUser();
+        return ResponseEntity.ok().body(getTaskService.getTaskById(id, user));
+    }
+
     @DeleteMapping("/delete/{id}")
     @Operation(description = "Delete a task")
     public ResponseEntity<Object> deleteTask(@Valid @PathVariable("id") int id) {

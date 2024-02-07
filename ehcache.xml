@@ -9,4 +9,16 @@
            timeToIdleSeconds="120"
            timeToLiveSeconds="120"
            overflowToDisk="true"/>
+    <cache name="tasks"
+           maxElementsInMemory="10000"
+           eternal="false"
+           timeToIdleSeconds="120"
+           timeToLiveSeconds="120"
+           overflowToDisk="true"/>
+    <cache name="task"
+           maxElementsInMemory="10000"
+           eternal="false"
+           timeToIdleSeconds="120"
+           timeToLiveSeconds="120"
+           overflowToDisk="true"/>
 </ehcache>
