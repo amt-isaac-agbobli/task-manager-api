@@ -61,6 +61,12 @@ public class TaskController {
         return ResponseEntity.ok().body(getTaskService.getTasksCreatedByUser(user, pageable));
     }
 
+    @GetMapping("/assigned-tasks")
+    public ResponseEntity<Page<TaskDto>> getAssignedTasks(Pageable pageable) {
+        User user = authenticatedUser();
+        return ResponseEntity.ok().body(getTaskService.getTasksAssignedToUser(user, pageable));
+    }
+
     private User authenticatedUser() {
         Authentication authentication = SecurityContextHolder
                 .getContext()

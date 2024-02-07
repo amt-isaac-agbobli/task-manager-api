@@ -27,6 +27,11 @@ public class GetTaskService {
         return tasks.map(this::convertToDto);
     }
 
+    public Page<TaskDto> getTasksAssignedToUser(User user, Pageable pageable) {
+        Page<Task> tasks = taskRepository.findByAssignedTo(user, pageable);
+        return tasks.map(this::convertToDto);
+    }
+
     private TaskDto convertToDto(Task task) {
         TaskDto dto = new TaskDto();
         dto.setId(task.getId());

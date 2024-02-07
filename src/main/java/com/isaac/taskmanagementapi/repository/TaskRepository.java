@@ -8,4 +8,6 @@ import org.springframework.data.jpa.repository.JpaRepository;
 
 public interface TaskRepository  extends JpaRepository<Task, Integer> {
     Page<Task> findByCreatedBy(User user, Pageable pageable);
+
+    Page<Task> findByAssignedTo(User user, Pageable pageable);
 }
