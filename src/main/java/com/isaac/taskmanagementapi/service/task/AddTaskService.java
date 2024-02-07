@@ -8,10 +8,10 @@ import com.isaac.taskmanagementapi.exception.HttpException;
 import com.isaac.taskmanagementapi.repository.TaskRepository;
 import com.isaac.taskmanagementapi.repository.UserRepository;
 import com.isaac.taskmanagementapi.util.email.interfaces.EmailService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
 
-import java.time.LocalDate;
 import java.util.Map;
 import java.util.Optional;
 
@@ -20,7 +20,7 @@ public class AddTaskService {
     private final TaskRepository taskRepository;
     private final UserRepository userRepository;
     private  final EmailService emailService;
-
+    @Autowired
     public AddTaskService(TaskRepository taskRepository,
                           UserRepository userRepository,
                           EmailService emailService) {
@@ -35,10 +35,11 @@ public class AddTaskService {
 
         User assignee = assignee(assignedTo);
 
+
         Task task = Task.builder()
                      .title(request.getTitle())
                      .description(request.getDescription())
-                     .dueDate(LocalDate.parse(request.getDueDate()))
+                     .dueDate(request.getDueDate())
                      .status(Status.PENDING)
                      .createdBy(user)
                      .assignedTo(User.builder().id(assignedTo).build())

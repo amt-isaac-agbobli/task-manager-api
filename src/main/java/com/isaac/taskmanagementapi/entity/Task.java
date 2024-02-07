@@ -52,5 +52,11 @@ public class Task {
         this.createdBy = createdBy;
         this.assignedTo = assignedTo;
     }
+    @PrePersist
+    public void prePersist() {
+        if (createdAt == null) {
+            createdAt = LocalDate.now();
+        }
+    }
 
 }
