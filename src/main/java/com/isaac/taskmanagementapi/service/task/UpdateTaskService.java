@@ -2,6 +2,7 @@ package com.isaac.taskmanagementapi.service.task;
 import com.isaac.taskmanagementapi.dto.task.UpdateTaskRequest;
 import com.isaac.taskmanagementapi.entity.Task;
 import com.isaac.taskmanagementapi.entity.User;
+import com.isaac.taskmanagementapi.enums.Status;
 import com.isaac.taskmanagementapi.exception.HttpException;
 import com.isaac.taskmanagementapi.repository.TaskRepository;
 import com.isaac.taskmanagementapi.repository.UserRepository;
@@ -58,6 +59,19 @@ public class UpdateTaskService {
         return Map.of("message", "Task reassigned successfully");
     }
 
+    public Object updateTaskStatus(int taskId, int userId, String status) {
+        Task taskExit = taskRepository.findById(taskId).orElse(null);
+        if(taskExit == null)
+            throw new HttpException("Task does not exist", HttpStatus.NOT_FOUND);
+
+        checkIfStatusIsValid(status);
+
+        taskExit.setStatus(Status.valueOf(status));
+        taskRepository.save(taskExit);
+
+        return Map.of("message", "Task status updated successfully");
+    }
+
 
     private void checkOwnerOfTask(int userId, Task taskExit) {
         if(taskExit.getCreatedBy().getId() != userId)
@@ -77,6 +91,11 @@ public class UpdateTaskService {
         this.emailService.sendEmail(assignee.getEmail(), "Task Assigned",
                 "You have been assigned a new task with title " + task.getTitle()
                         + " and due date " + task.getDueDate());
+    }
+
+    private void checkIfStatusIsValid(String status) {
+        if(!status.equals("PENDING") && !status.equals("IN_PROGRESS") && !status.equals("COMPLETED"))
+            throw new HttpException("Invalid status", HttpStatus.BAD_REQUEST);
     }
 
 }

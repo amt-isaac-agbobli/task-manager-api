@@ -3,7 +3,6 @@ package com.isaac.taskmanagementapi.controller.task;
 import com.isaac.taskmanagementapi.dto.task.AddTaskRequest;
 import com.isaac.taskmanagementapi.dto.task.TaskDto;
 import com.isaac.taskmanagementapi.dto.task.UpdateTaskRequest;
-import com.isaac.taskmanagementapi.entity.Task;
 import com.isaac.taskmanagementapi.entity.User;
 import com.isaac.taskmanagementapi.service.task.AddTaskService;
 import com.isaac.taskmanagementapi.service.task.GetTaskService;
@@ -54,6 +53,13 @@ public class TaskController {
                                             @Valid @RequestParam("assignedTo") int assignedTo) {
         User user = authenticatedUser();
         return ResponseEntity.ok().body(updateTaskService.reassignTask(id, user.getId(), assignedTo));
+    }
+
+    @PutMapping("/update-status/{id}")
+    public ResponseEntity<Object> updateTaskStatus(@PathVariable("id") int id,
+                                                  @Valid @RequestParam("status") String status) {
+        User user = authenticatedUser();
+        return ResponseEntity.ok().body(updateTaskService.updateTaskStatus(id, user.getId(), status));
     }
     @GetMapping("/my-tasks")
     public ResponseEntity<Page<TaskDto>> getMyTasks(Pageable pageable) {
