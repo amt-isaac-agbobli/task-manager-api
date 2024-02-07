@@ -1,8 +1,7 @@
-def appname = ''
-def deploy_group = ''
-def deploy_group_prod = ''
-def s3_bucket = ''
-def s3_filename = ''
+def appname = 'java-calculator'
+def deploy_group = 'java-calculator-bn'
+def s3_bucket = 'java-calculator-bucket'
+def s3_filename = 'java-calculator'
 
 //Slack Notification Integration
 def gitName = env.GIT_BRANCH
@@ -18,26 +17,26 @@ environment {
 
 // Successful Build
 def buildSuccess = [
-  [text: "Task Manager API Build Successful on ${branchName}",
-  fallback: "Task Manager API Build Successful on ${branchName}",
+  [text: "Java Calculator API Build Successful on ${branchName}",
+  fallback: "Java Calculator API Build Successful on ${branchName}",
   color: "#00FF00"
   ]
 ]
 
 // Failed Build
 def buildError = [
-  [text: "Task Manager API Build Failed on ${branchName}",
-  fallback: "Task Manager API Build Failed on ${branchName}",
+  [text: "Java Calculator API Build Failed on ${branchName}",
+  fallback: "TJava Calculator API Build Failed on ${branchName}",
   color: "#FF0000"
   ]
 ]
 
 pipeline {
   agent any
-tools {
-    maven 'maven'
-    jdk 'jdk8'
-}
+// tools {
+//     maven 'maven'
+//     jdk 'jdk8'
+// }
 
 stages {
     // stage('Build') {
