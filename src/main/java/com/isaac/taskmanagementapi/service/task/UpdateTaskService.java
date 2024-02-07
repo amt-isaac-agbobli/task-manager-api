@@ -17,11 +17,15 @@ public class UpdateTaskService {
     public UpdateTaskService(TaskRepository taskRepository) {
         this.taskRepository = taskRepository;
     }
-    public Object updateTask(UpdateTaskRequest request, int taskId) {
+    public Object updateTask(UpdateTaskRequest request, int taskId, int userId) {
 
         Task taskExit = taskRepository.findById(taskId).orElse(null);
         if(taskExit == null)
             throw new HttpException("Task does not exist", HttpStatus.NOT_FOUND);
+
+        if(taskExit.getCreatedBy().getId() != userId)
+            throw new HttpException("You are not authorized to update this task",
+                    HttpStatus.UNAUTHORIZED);
 
         taskExit.setTitle(request.getTitle());
         taskExit.setDescription(request.getDescription());
