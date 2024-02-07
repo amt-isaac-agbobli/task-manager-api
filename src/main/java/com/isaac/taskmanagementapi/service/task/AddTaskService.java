@@ -1,6 +1,6 @@
 package com.isaac.taskmanagementapi.service.task;
 
-import com.isaac.taskmanagementapi.dto.Task.TaskRequest;
+import com.isaac.taskmanagementapi.dto.Task.AddTaskRequest;
 import com.isaac.taskmanagementapi.entity.Task;
 import com.isaac.taskmanagementapi.entity.User;
 import com.isaac.taskmanagementapi.enums.Status;
@@ -18,7 +18,7 @@ public class AddTaskService {
         this.taskRepository = taskRepository;
     }
 
-    public Object addTask(TaskRequest request, User user) {
+    public Object addTask(AddTaskRequest request, User user) {
         int assignedTo = request.getAssignedTo() == 0 ? user.getId() : request.getAssignedTo();
 
         Task task = Task.builder()
