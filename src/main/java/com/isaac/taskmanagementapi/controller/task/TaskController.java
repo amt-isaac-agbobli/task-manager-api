@@ -29,11 +29,7 @@ public class TaskController {
     @PostMapping("/add")
     public ResponseEntity<Object> addTask(@Valid @RequestBody AddTaskRequest request) {
 
-        Authentication authentication = SecurityContextHolder
-                .getContext()
-                .getAuthentication();
-
-        User user = (User) authentication.getPrincipal();
+        User user = authenticatedUser();
         return ResponseEntity.status(201).body(addTaskService.addTask(request, user));
     }
 
@@ -41,11 +37,22 @@ public class TaskController {
     public ResponseEntity<Object> updateTask(@PathVariable("id") int id,
                                             @Valid @RequestBody UpdateTaskRequest request) {
 
+        User user = authenticatedUser();
+        return ResponseEntity.ok().body(updateTaskService.updateTask(request,id, user.getId()));
+    }
+
+    @PutMapping("/reassign-task/{id}")
+    public ResponseEntity<Object> updateTask(@PathVariable("id") int id,
+                                            @Valid @RequestParam("assignedTo") int assignedTo) {
+        User user = authenticatedUser();
+        return ResponseEntity.ok().body(updateTaskService.reassignTask(id, user.getId(), assignedTo));
+    }
+
+    private User authenticatedUser() {
         Authentication authentication = SecurityContextHolder
                 .getContext()
                 .getAuthentication();
 
-        User user = (User) authentication.getPrincipal();
-        return ResponseEntity.ok().body(updateTaskService.updateTask(request,id, user.getId()));
+        return (User) authentication.getPrincipal();
     }
 }
