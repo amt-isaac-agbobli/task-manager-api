@@ -1,2 +1,4 @@
-package com.isaac.taskmanagementapi.service.task.interfaces;public interface ITaskService {
+package com.isaac.taskmanagementapi.service.task.interfaces;
+
+public interface ITaskService {
 }
