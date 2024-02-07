@@ -1,0 +1,11 @@
+
+services:
+  task-manager-api:
+    image: task-manager-api
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: task-manager-api
+    restart: on-failure
+    ports:
+      - "8080:8080"
