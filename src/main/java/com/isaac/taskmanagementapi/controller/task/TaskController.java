@@ -41,7 +41,7 @@ public class TaskController {
     }
 
     @PutMapping("/update/{id}")
-    public ResponseEntity<Object> updateTask(@PathVariable("id") int id,
+    public ResponseEntity<Object> updateTask(@Valid @PathVariable("id") int id,
                                             @Valid @RequestBody UpdateTaskRequest request) {
 
         User user = authenticatedUser();
@@ -49,28 +49,34 @@ public class TaskController {
     }
 
     @PutMapping("/reassign-task/{id}")
-    public ResponseEntity<Object> updateTask(@PathVariable("id") int id,
+    public ResponseEntity<Object> updateTask(@Valid @PathVariable("id") int id,
                                             @Valid @RequestParam("assignedTo") int assignedTo) {
         User user = authenticatedUser();
         return ResponseEntity.ok().body(updateTaskService.reassignTask(id, user.getId(), assignedTo));
     }
 
     @PutMapping("/update-status/{id}")
-    public ResponseEntity<Object> updateTaskStatus(@PathVariable("id") int id,
+    public ResponseEntity<Object> updateTaskStatus(@Valid @PathVariable("id") int id,
                                                   @Valid @RequestParam("status") String status) {
         User user = authenticatedUser();
         return ResponseEntity.ok().body(updateTaskService.updateTaskStatus(id, user.getId(), status));
     }
     @GetMapping("/my-tasks")
-    public ResponseEntity<Page<TaskDto>> getMyTasks(Pageable pageable) {
+    public ResponseEntity<Page<TaskDto>> getMyTasks(@Valid Pageable pageable) {
         User user = authenticatedUser();
         return ResponseEntity.ok().body(getTaskService.getTasksCreatedByUser(user, pageable));
     }
 
     @GetMapping("/assigned-tasks")
-    public ResponseEntity<Page<TaskDto>> getAssignedTasks(Pageable pageable) {
+    public ResponseEntity<Page<TaskDto>> getAssignedTasks(@Valid Pageable pageable) {
         User user = authenticatedUser();
         return ResponseEntity.ok().body(getTaskService.getTasksAssignedToUser(user, pageable));
+    }
+
+    @DeleteMapping("/delete/{id}")
+    public ResponseEntity<Object> deleteTask(@Valid @PathVariable("id") int id) {
+        User user = authenticatedUser();
+        return ResponseEntity.ok().body(updateTaskService.deleteTask(id, user.getId()));
     }
 
     private User authenticatedUser() {

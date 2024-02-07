@@ -72,6 +72,18 @@ public class UpdateTaskService {
         return Map.of("message", "Task status updated successfully");
     }
 
+    public Object deleteTask(int taskId, int userId) {
+        Task taskExit = taskRepository.findById(taskId).orElse(null);
+        if(taskExit == null)
+            throw new HttpException("Task does not exist", HttpStatus.NOT_FOUND);
+
+        checkOwnerOfTask(userId, taskExit);
+
+        taskRepository.delete(taskExit);
+
+        return Map.of("message", "Task deleted successfully");
+    }
+
 
     private void checkOwnerOfTask(int userId, Task taskExit) {
         if(taskExit.getCreatedBy().getId() != userId)
