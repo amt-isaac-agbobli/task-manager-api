@@ -4,6 +4,7 @@ import com.isaac.taskmanagementapi.dto.password.UpdatePasswordRequest;
 import com.isaac.taskmanagementapi.entity.User;
 import com.isaac.taskmanagementapi.service.password.UpdatePasswordService;
 import com.isaac.taskmanagementapi.service.user.UserService;
+import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.security.SecurityRequirement;
 import jakarta.validation.Valid;
 import org.springframework.http.ResponseEntity;
@@ -24,27 +25,31 @@ public class UserController {
         this.updatePasswordService = updatePasswordService;
     }
     @GetMapping("/profile")
+    @Operation(description = "Get user profile")
     public ResponseEntity<Object> getUserProfile() {
 
-        Authentication authentication = SecurityContextHolder
-                .getContext()
-                .getAuthentication();
+        User user = authenticatedUser();
 
-        User user = (User) authentication.getPrincipal();
         return ResponseEntity.ok().body(userService
                 .getUserProfile(user.getUsername()));
     }
 
     @PutMapping("/updatePassword")
+    @Operation(description = "Update user password")
     public ResponseEntity<Object> updatePassword(@Valid @RequestBody UpdatePasswordRequest request) {
+
+        User user = authenticatedUser();
+
+        return ResponseEntity.ok().body(updatePasswordService
+                .updateUserPassword(user.getUsername(), request));
+    }
+
+    private User authenticatedUser() {
         Authentication authentication = SecurityContextHolder
                 .getContext()
                 .getAuthentication();
 
-        User user = (User) authentication.getPrincipal();
-
-        return ResponseEntity.ok().body(updatePasswordService
-                .updateUserPassword(user.getUsername(), request));
+        return (User) authentication.getPrincipal();
     }
 
 }
