@@ -93,7 +93,8 @@ public class UpdateTaskService {
                         + " and due date " + task.getDueDate());
     }
 
-    private void checkIfStatusIsValid(String status) {
+    private void checkIfStatusIsValid(String statusRequest) {
+         String status = statusRequest.toUpperCase();
         if(!status.equals("PENDING") && !status.equals("IN_PROGRESS") && !status.equals("COMPLETED"))
             throw new HttpException("Invalid status", HttpStatus.BAD_REQUEST);
     }
