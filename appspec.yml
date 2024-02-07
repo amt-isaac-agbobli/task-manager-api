@@ -1,0 +1,15 @@
+version: 0.0
+os: linux
+files:
+  - source: /
+    destination: /home/projects/task-manager-api
+hooks:
+  BeforeInstall:
+    - location: scripts/before-install.sh
+      timeout: 1000
+  AfterInstall:
+    - location: scripts/after-install.sh
+      timeout: 1000
+  ApplicationStart:
+    - location: scripts/boot.sh
+      timeout: 1000
