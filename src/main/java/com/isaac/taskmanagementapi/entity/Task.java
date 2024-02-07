@@ -41,8 +41,16 @@ public class Task {
     @JoinColumn(name = "assigned_to")
     private User assignedTo;
 
-    public void setCreatedAt(LocalDate createdAt) {
+    public Task(String title, String description,
+                LocalDate dueDate, Status status,
+                User createdBy, User assignedTo) {
+        this.title = title;
+        this.description = description;
+        this.dueDate = dueDate;
+        this.status = status;
         this.createdAt = LocalDate.now();
+        this.createdBy = createdBy;
+        this.assignedTo = assignedTo;
     }
 
 }
