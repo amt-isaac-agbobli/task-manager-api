@@ -1,6 +1,6 @@
 package com.isaac.taskmanagementapi.service.task;
 
-import com.isaac.taskmanagementapi.dto.Task.AddTaskRequest;
+import com.isaac.taskmanagementapi.dto.task.AddTaskRequest;
 import com.isaac.taskmanagementapi.entity.Task;
 import com.isaac.taskmanagementapi.entity.User;
 import com.isaac.taskmanagementapi.enums.Status;

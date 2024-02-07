@@ -1,4 +1,4 @@
-package com.isaac.taskmanagementapi.dto.Task;
+package com.isaac.taskmanagementapi.dto.user;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;

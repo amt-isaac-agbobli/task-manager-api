@@ -1,7 +1,6 @@
-package com.isaac.taskmanagementapi.dto.Task;
+package com.isaac.taskmanagementapi.dto.task;
 
 import jakarta.validation.constraints.NotBlank;
-import jakarta.validation.constraints.NotEmpty;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -22,7 +21,7 @@ public class AddTaskRequest {
     @NotBlank(message = "Description is required")
     @Length(min = 10, max = 1000, message = "Description must be between 3 and 1000 characters")
     private String description;
-    
+
     private LocalDate dueDate;
 
     private int assignedTo;

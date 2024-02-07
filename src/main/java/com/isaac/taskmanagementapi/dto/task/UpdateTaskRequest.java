@@ -1,4 +1,4 @@
-package com.isaac.taskmanagementapi.dto.Task;
+package com.isaac.taskmanagementapi.dto.task;
 
 import jakarta.validation.constraints.NotBlank;
 import lombok.AllArgsConstructor;
