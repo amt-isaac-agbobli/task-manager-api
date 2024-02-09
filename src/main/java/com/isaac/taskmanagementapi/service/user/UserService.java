@@ -32,4 +32,14 @@ public class UserService implements IUserService {
         return user;
     }
 
+    public Object updateUserProfile(String email, String name) {
+        User existingUser = userRepository.findByEmail(email);
+        if (existingUser == null) {
+            throw new HttpException("User does not exist", HttpStatus.NOT_FOUND);
+        }
+        existingUser.setName(name);
+        userRepository.save(existingUser);
+        return existingUser;
+    }
+
 }
