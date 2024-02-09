@@ -1,7 +1,7 @@
-def appname = 'java-calculator'
-def deploy_group = 'java-calculator-bn'
-def s3_bucket = 'java-calculator-bucket'
-def s3_filename = 'java-calculator'
+def appname = ' '
+def deploy_group = ''
+def s3_bucket = ''
+def s3_filename = ''
 
 //Slack Notification Integration
 def gitName = env.GIT_BRANCH
@@ -17,16 +17,16 @@ environment {
 
 // Successful Build
 def buildSuccess = [
-  [text: "Java Calculator API Build Successful on ${branchName}",
-  fallback: "Java Calculator API Build Successful on ${branchName}",
+  [text: "Task Manager API Build Successful on ${branchName}",
+  fallback: "Task Manager API Build Successful on ${branchName}",
   color: "#00FF00"
   ]
 ]
 
 // Failed Build
 def buildError = [
-  [text: "Java Calculator API Build Failed on ${branchName}",
-  fallback: "TJava Calculator API Build Failed on ${branchName}",
+  [text: "Task Manager API Build Failed on ${branchName}",
+  fallback: "Task Manager API Build Failed on ${branchName}",
   color: "#FF0000"
   ]
 ]
@@ -49,15 +49,11 @@ pipeline {
       }
     }
 
+
     stage('Prepare to Deploy') {
-    //   when {
-    //     anyOf {
-    //         branch 'main'
-    //         branch 'develop'
-    //     }
-    // }
+
       steps {
-        withAWS(region:'eu-west-1',credentials:'aws-cred') {
+        withAWS(region:'eu-west-1',credentials:'aws_cred') {
           script {
             def gitsha = sh(script: 'git log -n1 --format=format:"%H"', returnStdout: true)
             s3_filename = "${s3_filename}-${gitsha}"
@@ -82,7 +78,7 @@ pipeline {
     //     }
     // }
       steps {
-        withAWS(region:'eu-west-1',credentials:'aws-cred') {
+        withAWS(region:'eu-west-1',credentials:'aws_cred') {
           script {
             sh """
               aws deploy create-deployment \
