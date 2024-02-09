@@ -13,6 +13,5 @@ import lombok.NoArgsConstructor;
 public class UserDto {
     private int id;
     private String email;
-
-    // getters and setters
+    private String name;
 }

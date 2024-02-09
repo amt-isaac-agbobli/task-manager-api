@@ -1,4 +1,4 @@
-package com.isaac.taskmanagementapi.controller;
+package com.isaac.taskmanagementapi.controller.auth;
 
 import com.isaac.taskmanagementapi.dto.password.ForgetPasswordRequest;
 import com.isaac.taskmanagementapi.dto.auth.SignInRequest;
