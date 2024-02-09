@@ -44,6 +44,16 @@ public class UserController {
                 .updateUserPassword(user.getUsername(), request));
     }
 
+    @PatchMapping("/updateProfile")
+    @Operation(description = "Update user profile")
+    public ResponseEntity<Object> updateProfile(@Valid @RequestParam("name") String name) {
+
+        User user = authenticatedUser();
+
+        return ResponseEntity.ok().body(userService
+                .updateUserProfile(user.getUsername(), name));
+    }
+
     private User authenticatedUser() {
         Authentication authentication = SecurityContextHolder
                 .getContext()
