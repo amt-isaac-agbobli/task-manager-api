@@ -6,7 +6,6 @@ import com.isaac.taskmanagementapi.entity.Task;
 import com.isaac.taskmanagementapi.entity.User;
 import com.isaac.taskmanagementapi.exception.HttpException;
 import com.isaac.taskmanagementapi.repository.TaskRepository;
-import com.isaac.taskmanagementapi.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cache.annotation.Cacheable;
 import org.springframework.data.domain.Page;
