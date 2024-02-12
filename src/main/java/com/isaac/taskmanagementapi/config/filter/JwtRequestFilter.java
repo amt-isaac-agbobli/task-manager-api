@@ -36,24 +36,33 @@ public class JwtRequestFilter extends OncePerRequestFilter {
     @Override
     protected void doFilterInternal(HttpServletRequest request, HttpServletResponse response, FilterChain filterChain)
             throws ServletException, IOException {
+        try {
+            String authorizationHeader = request.getHeader("Authorization");
 
-        String authorizationHeader = request.getHeader("Authorization");
+            if (authorizationHeader == null || authorizationHeader.isBlank() || !authorizationHeader.startsWith("Bearer ")) {
+                throw new HttpException("HTTP header is required", HttpStatus.UNAUTHORIZED);
+            }
 
-        if (authorizationHeader == null || authorizationHeader.isBlank() || !authorizationHeader.startsWith("Bearer ")) {
-            throw new HttpException("HTTP header is required", HttpStatus.UNAUTHORIZED);
+            String token = authorizationHeader.replace("Bearer ", "").trim();
+
+            if (token.split("\\.").length != 3) {
+                throw new HttpException("Invalid JWT token", HttpStatus.UNAUTHORIZED);
+            }
+
+            String tokenSubject = this.getJwtSubjectService.execute(token);
+
+            User authenticatedUser = (User) userService.getUserByEmail(tokenSubject);
+
+            Authentication auth = new UsernamePasswordAuthenticationToken(authenticatedUser,
+                    null, authenticatedUser.getAuthorities());
+
+            SecurityContextHolder.getContext().setAuthentication(auth);
+
+            filterChain.doFilter(request, response);
+        } catch (HttpException e) {
+            response.setStatus(e.getHttpStatus().value());
+            response.getWriter().write(e.getMessage());
         }
-
-        String token = authorizationHeader.replace("Bearer ", "").trim();
-
-        String tokenSubject = this.getJwtSubjectService.execute(token);
-
-        User authenticatedUser = (User) userService.getUserByEmail(tokenSubject);
-
-        Authentication auth = new UsernamePasswordAuthenticationToken(authenticatedUser, null, authenticatedUser.getAuthorities());
-
-        SecurityContextHolder.getContext().setAuthentication(auth);
-
-        filterChain.doFilter(request, response);
     }
 
     @Override
