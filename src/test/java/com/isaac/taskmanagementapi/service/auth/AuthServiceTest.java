@@ -5,7 +5,6 @@ import com.isaac.taskmanagementapi.dto.auth.SignUpUserRequest;
 import com.isaac.taskmanagementapi.entity.User;
 import com.isaac.taskmanagementapi.exception.HttpException;
 import com.isaac.taskmanagementapi.repository.UserRepository;
-import com.isaac.taskmanagementapi.service.auth.AuthService;
 import com.isaac.taskmanagementapi.service.user.UserService;
 import com.isaac.taskmanagementapi.util.jwt.CreateJwtService;
 import org.junit.jupiter.api.BeforeEach;
@@ -13,7 +12,6 @@ import org.junit.jupiter.api.Test;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.MockitoAnnotations;
-import org.springframework.http.HttpStatus;
 import org.springframework.security.crypto.password.PasswordEncoder;
 
 import java.util.Map;

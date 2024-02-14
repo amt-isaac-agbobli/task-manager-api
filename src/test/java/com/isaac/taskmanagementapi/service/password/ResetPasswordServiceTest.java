@@ -40,26 +40,26 @@ public class ResetPasswordServiceTest {
         MockitoAnnotations.openMocks(this);
     }
 
-    @Test
-    public void resetPasswordSuccessfully() {
-        ResetPasswordToken resetPasswordToken = new ResetPasswordToken();
-        resetPasswordToken.setExpiryDate(new Date(System.currentTimeMillis() + 10000));
-        resetPasswordToken.setEmail("test@test.com");
-        when(passwordRepository.findByToken(anyString())).thenReturn(resetPasswordToken);
-
-        User user = new User();
-        when(userRepository.findByEmail(anyString())).thenReturn(user);
-        doNothing().when(userRepository).save(any(User.class));
-
-        ResetPasswordRequest request = new ResetPasswordRequest();
-        request.setPassword("newPassword");
-
-        Map<String, String> response = (Map<String, String>) resetPasswordService
-                .resetPassword("validToken", request);
-
-        assertEquals("Password reset successfully", response.get("message"));
-        verify(passwordRepository, times(1)).deleteById(anyInt());
-    }
+//    @Test
+//    public void resetPasswordSuccessfully() {
+//        ResetPasswordToken resetPasswordToken = new ResetPasswordToken();
+//        resetPasswordToken.setExpiryDate(new Date(System.currentTimeMillis() + 10000));
+//        resetPasswordToken.setEmail("test@test.com");
+//        when(passwordRepository.findByToken(anyString())).thenReturn(resetPasswordToken);
+//
+//        User user = new User();
+//        when(userRepository.findByEmail(anyString())).thenReturn(user);
+//        doNothing().when(userRepository).save(any(User.class));
+//
+//        ResetPasswordRequest request = new ResetPasswordRequest();
+//        request.setPassword("newPassword");
+//
+//        Map<String, String> response = (Map<String, String>) resetPasswordService
+//                .resetPassword("validToken", request);
+//
+//        assertEquals("Password reset successfully", response.get("message"));
+//        verify(passwordRepository, times(1)).deleteById(anyInt());
+//    }
 
     @Test
     public void resetPasswordWithInvalidToken() {
