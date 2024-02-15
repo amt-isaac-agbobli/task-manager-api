@@ -1,2 +1,37 @@
-package com.isaac.taskmanagementapi.controller.logger;public class LoggerController {
+package com.isaac.taskmanagementapi.controller.logger;
+
+import io.swagger.v3.oas.annotations.security.SecurityRequirement;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.springframework.http.MediaType;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.RestController;
+
+import java.util.HashMap;
+import java.util.Map;
+
+@RestController
+@SecurityRequirement(name = "bearer-key")
+public class LoggerController {
+
+    private static final Logger LOGGER = LoggerFactory.getLogger(LoggerController.class);
+
+    @GetMapping(value = "/log", consumes = MediaType.ALL_VALUE)
+    public ResponseEntity<Object> loggerTest(@RequestParam("q") String q){
+        Map<String, String> response = new HashMap<>();
+        try {
+            LOGGER.info("started...");
+            response.put("message", "normal flow of the application");
+            if(q.equalsIgnoreCase("exception")){
+                throw new RuntimeException("Testing the exception logging mechanism");
+            }
+            LOGGER.info("before sending response");
+            return ResponseEntity.ok(response);
+        }catch (Exception ex){
+            LOGGER.error("Exception: "+ex.getMessage());
+            return ResponseEntity.internalServerError().build();
+        }
+    }
 }

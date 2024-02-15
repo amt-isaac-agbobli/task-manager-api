@@ -1,0 +1,113 @@
+2024-02-15 09:30:18.475 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.1.Final
+2024-02-15 09:30:18.538 [restartedMain] INFO  c.i.t.TaskManagementApiApplication - Starting TaskManagementApiApplication using Java 21.0.1 with PID 18940 (C:\Users\IsaacAgbobli\OneDrive - AmaliTech gGmbH\Desktop\Project\calculator\task-management-api\target\classes started by IsaacAgbobli in C:\Users\IsaacAgbobli\OneDrive - AmaliTech gGmbH\Desktop\Project\calculator\task-management-api)
+2024-02-15 09:30:18.540 [restartedMain] INFO  c.i.t.TaskManagementApiApplication - No active profile set, falling back to 1 default profile: "default"
+2024-02-15 09:30:18.622 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2024-02-15 09:30:18.623 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2024-02-15 09:30:18.661 [restartedMain] INFO  o.s.b.d.c.l.DockerComposeLifecycleManager - Using Docker Compose file 'C:\Users\IsaacAgbobli\OneDrive - AmaliTech gGmbH\Desktop\Project\calculator\task-management-api\compose.yaml'
+2024-02-15 09:30:21.575 [restartedMain] INFO  o.s.b.d.c.l.DockerComposeLifecycleManager - There are already Docker Compose services running, skipping startup
+2024-02-15 09:30:23.882 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-02-15 09:30:24.122 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 226 ms. Found 3 JPA repository interfaces.
+2024-02-15 09:30:25.541 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2024-02-15 09:30:25.563 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2024-02-15 09:30:25.567 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2024-02-15 09:30:25.568 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.18]
+2024-02-15 09:30:25.669 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2024-02-15 09:30:25.669 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 4080 ms
+2024-02-15 09:30:26.064 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-02-15 09:30:26.189 [restartedMain] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.4.1.Final
+2024-02-15 09:30:26.252 [restartedMain] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2024-02-15 09:30:26.700 [restartedMain] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-02-15 09:30:26.752 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2024-02-15 09:30:27.378 [restartedMain] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@7889f38a
+2024-02-15 09:30:27.380 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2024-02-15 09:30:27.662 [restartedMain] WARN  org.hibernate.orm.deprecation - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-02-15 09:30:29.318 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-02-15 09:30:29.912 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-02-15 09:30:30.839 [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-02-15 09:30:31.308 [restartedMain] INFO  o.s.s.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@1e48f5a1, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@7fae19ba, org.springframework.security.web.context.SecurityContextHolderFilter@53e2d5b0, org.springframework.security.web.header.HeaderWriterFilter@4845103a, org.springframework.web.filter.CorsFilter@22e703e0, org.springframework.security.web.authentication.logout.LogoutFilter@5ccb9be2, com.isaac.taskmanagementapi.config.filter.JwtRequestFilter@1c0aca67, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@7ca96fb7, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@520380a4, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@7e63e8da, org.springframework.security.web.session.SessionManagementFilter@27845087, org.springframework.security.web.access.ExceptionTranslationFilter@44a2241a, org.springframework.security.web.access.intercept.AuthorizationFilter@369d613e]
+2024-02-15 09:30:31.795 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2024-02-15 09:30:31.829 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2024-02-15 09:30:31.852 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path ''
+2024-02-15 09:30:31.862 [restartedMain] INFO  c.i.t.TaskManagementApiApplication - Started TaskManagementApiApplication in 14.075 seconds (process running for 17.189)
+2024-02-15 09:31:20.443 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-02-15 09:31:20.444 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2024-02-15 09:31:20.446 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 2 ms
+2024-02-15 09:31:22.007 [http-nio-8080-exec-9] INFO  o.s.api.AbstractOpenApiResource - Init duration for springdoc-openapi is: 598 ms
+2024-02-15 09:33:26.273 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-02-15 09:33:26.278 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2024-02-15 09:33:26.284 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2024-02-15 09:33:33.822 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.1.Final
+2024-02-15 09:33:33.892 [restartedMain] INFO  c.i.t.TaskManagementApiApplication - Starting TaskManagementApiApplication using Java 21.0.1 with PID 10880 (C:\Users\IsaacAgbobli\OneDrive - AmaliTech gGmbH\Desktop\Project\calculator\task-management-api\target\classes started by IsaacAgbobli in C:\Users\IsaacAgbobli\OneDrive - AmaliTech gGmbH\Desktop\Project\calculator\task-management-api)
+2024-02-15 09:33:33.894 [restartedMain] INFO  c.i.t.TaskManagementApiApplication - No active profile set, falling back to 1 default profile: "default"
+2024-02-15 09:33:33.982 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2024-02-15 09:33:33.983 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2024-02-15 09:33:34.015 [restartedMain] INFO  o.s.b.d.c.l.DockerComposeLifecycleManager - Using Docker Compose file 'C:\Users\IsaacAgbobli\OneDrive - AmaliTech gGmbH\Desktop\Project\calculator\task-management-api\compose.yaml'
+2024-02-15 09:33:36.880 [restartedMain] INFO  o.s.b.d.c.l.DockerComposeLifecycleManager - There are already Docker Compose services running, skipping startup
+2024-02-15 09:33:38.619 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-02-15 09:33:38.766 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 133 ms. Found 3 JPA repository interfaces.
+2024-02-15 09:33:39.860 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2024-02-15 09:33:39.878 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2024-02-15 09:33:39.882 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2024-02-15 09:33:39.882 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.18]
+2024-02-15 09:33:39.983 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2024-02-15 09:33:39.983 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 3088 ms
+2024-02-15 09:33:40.334 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-02-15 09:33:40.433 [restartedMain] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.4.1.Final
+2024-02-15 09:33:40.490 [restartedMain] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2024-02-15 09:33:40.887 [restartedMain] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-02-15 09:33:40.932 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2024-02-15 09:33:41.199 [restartedMain] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@298001b4
+2024-02-15 09:33:41.201 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2024-02-15 09:33:41.256 [restartedMain] WARN  org.hibernate.orm.deprecation - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-02-15 09:33:42.880 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-02-15 09:33:43.019 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-02-15 09:33:43.869 [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-02-15 09:33:44.338 [restartedMain] INFO  o.s.s.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@369d613e, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@4922bf51, org.springframework.security.web.context.SecurityContextHolderFilter@30d356fe, org.springframework.security.web.header.HeaderWriterFilter@44a2241a, org.springframework.web.filter.CorsFilter@1e48f5a1, org.springframework.security.web.authentication.logout.LogoutFilter@79bb6e25, com.isaac.taskmanagementapi.config.filter.JwtRequestFilter@5e924054, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@53e2d5b0, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@5667b723, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@7fae19ba, org.springframework.security.web.session.SessionManagementFilter@5ebb69d7, org.springframework.security.web.access.ExceptionTranslationFilter@4b9c453b, org.springframework.security.web.access.intercept.AuthorizationFilter@32ccae2a]
+2024-02-15 09:33:44.915 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2024-02-15 09:33:44.948 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2024-02-15 09:33:44.971 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path ''
+2024-02-15 09:33:44.984 [restartedMain] INFO  c.i.t.TaskManagementApiApplication - Started TaskManagementApiApplication in 11.738 seconds (process running for 13.394)
+2024-02-15 09:33:46.262 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-02-15 09:33:46.262 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2024-02-15 09:33:46.264 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 2 ms
+2024-02-15 09:33:47.926 [http-nio-8080-exec-4] INFO  o.s.api.AbstractOpenApiResource - Init duration for springdoc-openapi is: 641 ms
+2024-02-15 09:34:25.018 [http-nio-8080-exec-6] INFO  c.i.t.c.logger.LoggerController - started...
+2024-02-15 09:34:25.019 [http-nio-8080-exec-6] INFO  c.i.t.c.logger.LoggerController - before sending response
+2024-02-15 09:34:51.900 [http-nio-8080-exec-7] WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [com.isaac.taskmanagementapi.exception.HttpException: Invalid credentials]
+2024-02-15 09:35:03.504 [http-nio-8080-exec-8] INFO  c.i.t.c.logger.LoggerController - started...
+2024-02-15 09:35:03.504 [http-nio-8080-exec-8] INFO  c.i.t.c.logger.LoggerController - before sending response
+2024-02-15 09:38:07.731 [File Watcher] INFO  o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener - Restarting due to 61 class path changes (0 additions, 61 deletions, 0 modifications)
+2024-02-15 09:38:07.743 [Thread-17] INFO  o.a.coyote.http11.Http11NioProtocol - Stopping ProtocolHandler ["http-nio-8080"]
+2024-02-15 09:38:07.756 [Thread-17] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-02-15 09:38:07.763 [Thread-17] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2024-02-15 09:38:07.777 [Thread-17] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2024-02-15 09:38:18.864 [restartedMain] INFO  c.i.t.TaskManagementApiApplication - Starting TaskManagementApiApplication using Java 21.0.1 with PID 10880 (C:\Users\IsaacAgbobli\OneDrive - AmaliTech gGmbH\Desktop\Project\calculator\task-management-api\target\classes started by IsaacAgbobli in C:\Users\IsaacAgbobli\OneDrive - AmaliTech gGmbH\Desktop\Project\calculator\task-management-api)
+2024-02-15 09:38:18.865 [restartedMain] INFO  c.i.t.TaskManagementApiApplication - No active profile set, falling back to 1 default profile: "default"
+2024-02-15 09:38:18.873 [restartedMain] INFO  o.s.b.d.c.l.DockerComposeLifecycleManager - Using Docker Compose file 'C:\Users\IsaacAgbobli\OneDrive - AmaliTech gGmbH\Desktop\Project\calculator\task-management-api\compose.yaml'
+2024-02-15 09:38:21.406 [restartedMain] INFO  o.s.b.d.c.l.DockerComposeLifecycleManager - There are already Docker Compose services running, skipping startup
+2024-02-15 09:38:22.376 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-02-15 09:38:22.419 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 43 ms. Found 3 JPA repository interfaces.
+2024-02-15 09:38:22.771 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2024-02-15 09:38:22.777 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2024-02-15 09:38:22.777 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.18]
+2024-02-15 09:38:22.817 [restartedMain] INFO  o.a.c.c.C.[Tomcat-1].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2024-02-15 09:38:22.817 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1406 ms
+2024-02-15 09:38:22.958 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-02-15 09:38:22.964 [restartedMain] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2024-02-15 09:38:22.972 [restartedMain] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-02-15 09:38:22.974 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Starting...
+2024-02-15 09:38:23.045 [restartedMain] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-2 - Added connection org.postgresql.jdbc.PgConnection@5b6aff20
+2024-02-15 09:38:23.045 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Start completed.
+2024-02-15 09:38:23.050 [restartedMain] WARN  org.hibernate.orm.deprecation - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-02-15 09:38:23.238 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-02-15 09:38:23.339 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-02-15 09:38:23.791 [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-02-15 09:38:24.158 [restartedMain] INFO  o.s.s.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@21fb691e, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@339bd368, org.springframework.security.web.context.SecurityContextHolderFilter@a77590a, org.springframework.security.web.header.HeaderWriterFilter@53a7f5e6, org.springframework.web.filter.CorsFilter@686b4f6e, org.springframework.security.web.authentication.logout.LogoutFilter@237dc682, com.isaac.taskmanagementapi.config.filter.JwtRequestFilter@5b106d25, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@5bf271ba, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@3716a7e7, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@7b592075, org.springframework.security.web.session.SessionManagementFilter@1f8e6638, org.springframework.security.web.access.ExceptionTranslationFilter@12786583, org.springframework.security.web.access.intercept.AuthorizationFilter@6c7ffbc5]
+2024-02-15 09:38:24.618 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2024-02-15 09:38:24.721 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path ''
+2024-02-15 09:38:24.728 [restartedMain] INFO  c.i.t.TaskManagementApiApplication - Started TaskManagementApiApplication in 5.918 seconds (process running for 293.139)
+2024-02-15 09:38:24.731 [restartedMain] INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
+2024-02-15 09:38:29.433 [File Watcher] INFO  o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener - Restarting due to 61 class path changes (0 additions, 61 deletions, 0 modifications)
+2024-02-15 09:38:29.465 [Thread-19] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-02-15 09:38:29.470 [Thread-19] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Shutdown initiated...
+2024-02-15 09:38:29.498 [Thread-19] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Shutdown completed.
