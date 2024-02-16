@@ -111,3 +111,407 @@
 2024-02-15 09:38:29.465 [Thread-19] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
 2024-02-15 09:38:29.470 [Thread-19] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Shutdown initiated...
 2024-02-15 09:38:29.498 [Thread-19] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Shutdown completed.
+2024-02-15 10:00:18.529 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.1.Final
+2024-02-15 10:00:18.584 [restartedMain] INFO  c.i.t.TaskManagementApiApplication - Starting TaskManagementApiApplication using Java 21.0.1 with PID 15264 (C:\Users\IsaacAgbobli\OneDrive - AmaliTech gGmbH\Desktop\Project\calculator\task-management-api\target\classes started by IsaacAgbobli in C:\Users\IsaacAgbobli\OneDrive - AmaliTech gGmbH\Desktop\Project\calculator\task-management-api)
+2024-02-15 10:00:18.586 [restartedMain] INFO  c.i.t.TaskManagementApiApplication - No active profile set, falling back to 1 default profile: "default"
+2024-02-15 10:00:18.683 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2024-02-15 10:00:18.684 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2024-02-15 10:00:18.718 [restartedMain] INFO  o.s.b.d.c.l.DockerComposeLifecycleManager - Using Docker Compose file 'C:\Users\IsaacAgbobli\OneDrive - AmaliTech gGmbH\Desktop\Project\calculator\task-management-api\compose.yaml'
+2024-02-15 10:00:22.257 [restartedMain] INFO  o.s.b.d.c.l.DockerComposeLifecycleManager - There are already Docker Compose services running, skipping startup
+2024-02-15 10:00:24.283 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-02-15 10:00:24.526 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 230 ms. Found 3 JPA repository interfaces.
+2024-02-15 10:00:26.040 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2024-02-15 10:00:26.064 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2024-02-15 10:00:26.071 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2024-02-15 10:00:26.071 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.18]
+2024-02-15 10:00:26.203 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2024-02-15 10:00:26.204 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 3928 ms
+2024-02-15 10:00:26.623 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-02-15 10:00:26.735 [restartedMain] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.4.1.Final
+2024-02-15 10:00:26.797 [restartedMain] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2024-02-15 10:00:27.275 [restartedMain] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-02-15 10:00:27.324 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2024-02-15 10:00:27.752 [restartedMain] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@28acbb64
+2024-02-15 10:00:27.755 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2024-02-15 10:00:27.834 [restartedMain] WARN  org.hibernate.orm.deprecation - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-02-15 10:00:30.239 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-02-15 10:00:30.465 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-02-15 10:00:31.785 [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-02-15 10:00:32.319 [restartedMain] INFO  o.s.s.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@404a5dda, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@56829d52, org.springframework.security.web.context.SecurityContextHolderFilter@554edadb, org.springframework.security.web.header.HeaderWriterFilter@735c9ada, org.springframework.web.filter.CorsFilter@2de59eb3, org.springframework.security.web.authentication.logout.LogoutFilter@5ed562a0, com.isaac.taskmanagementapi.config.filter.JwtRequestFilter@3057979c, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@4c46a2bf, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@1d52518b, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@4a70c368, org.springframework.security.web.session.SessionManagementFilter@17d53aa0, org.springframework.security.web.access.ExceptionTranslationFilter@5080d200, org.springframework.security.web.access.intercept.AuthorizationFilter@5635a534]
+2024-02-15 10:00:32.793 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2024-02-15 10:00:32.832 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2024-02-15 10:00:32.841 [restartedMain] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Failed to start bean 'webServerStartStop'
+2024-02-15 10:00:32.846 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-02-15 10:00:32.852 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2024-02-15 10:00:32.859 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2024-02-15 10:00:32.891 [restartedMain] INFO  o.s.b.a.l.ConditionEvaluationReportLogger - 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2024-02-15 10:00:32.928 [restartedMain] ERROR o.s.b.d.LoggingFailureAnalysisReporter - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Web server failed to start. Port 8080 was already in use.
+
+Action:
+
+Identify and stop the process that's listening on port 8080 or configure this application to listen on another port.
+
+2024-02-15 10:01:38.582 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.1.Final
+2024-02-15 10:01:38.673 [restartedMain] INFO  c.i.t.TaskManagementApiApplication - Starting TaskManagementApiApplication using Java 21.0.1 with PID 1140 (C:\Users\IsaacAgbobli\OneDrive - AmaliTech gGmbH\Desktop\Project\calculator\task-management-api\target\classes started by IsaacAgbobli in C:\Users\IsaacAgbobli\OneDrive - AmaliTech gGmbH\Desktop\Project\calculator\task-management-api)
+2024-02-15 10:01:38.675 [restartedMain] INFO  c.i.t.TaskManagementApiApplication - No active profile set, falling back to 1 default profile: "default"
+2024-02-15 10:01:38.807 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2024-02-15 10:01:38.808 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2024-02-15 10:01:38.849 [restartedMain] INFO  o.s.b.d.c.l.DockerComposeLifecycleManager - Using Docker Compose file 'C:\Users\IsaacAgbobli\OneDrive - AmaliTech gGmbH\Desktop\Project\calculator\task-management-api\compose.yaml'
+2024-02-15 10:01:41.866 [restartedMain] INFO  o.s.b.d.c.l.DockerComposeLifecycleManager - There are already Docker Compose services running, skipping startup
+2024-02-15 10:01:43.424 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-02-15 10:01:43.536 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 101 ms. Found 3 JPA repository interfaces.
+2024-02-15 10:01:44.450 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2024-02-15 10:01:44.461 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2024-02-15 10:01:44.464 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2024-02-15 10:01:44.465 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.18]
+2024-02-15 10:01:44.534 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2024-02-15 10:01:44.534 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2651 ms
+2024-02-15 10:01:44.834 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-02-15 10:01:44.937 [restartedMain] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.4.1.Final
+2024-02-15 10:01:44.987 [restartedMain] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2024-02-15 10:01:45.527 [restartedMain] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-02-15 10:01:45.580 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2024-02-15 10:01:45.942 [restartedMain] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@1e7496a7
+2024-02-15 10:01:45.948 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2024-02-15 10:01:46.142 [restartedMain] WARN  org.hibernate.orm.deprecation - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-02-15 10:01:48.250 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-02-15 10:01:48.442 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-02-15 10:01:49.680 [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-02-15 10:01:50.289 [restartedMain] INFO  o.s.s.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@24d2dcff, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@6c8bad10, org.springframework.security.web.context.SecurityContextHolderFilter@40749d49, org.springframework.security.web.header.HeaderWriterFilter@1684d801, org.springframework.web.filter.CorsFilter@79f06646, org.springframework.security.web.authentication.logout.LogoutFilter@368da76, com.isaac.taskmanagementapi.config.filter.JwtRequestFilter@6ec08ece, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@55ec9408, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@46c8b73b, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@3e1ea99a, org.springframework.security.web.session.SessionManagementFilter@1bed5111, org.springframework.security.web.access.ExceptionTranslationFilter@6f205ced, org.springframework.security.web.access.intercept.AuthorizationFilter@7f6d407f]
+2024-02-15 10:01:50.916 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2024-02-15 10:01:50.961 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2024-02-15 10:01:50.969 [restartedMain] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Failed to start bean 'webServerStartStop'
+2024-02-15 10:01:50.976 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-02-15 10:01:50.981 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2024-02-15 10:01:50.987 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2024-02-15 10:01:51.015 [restartedMain] INFO  o.s.b.a.l.ConditionEvaluationReportLogger - 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2024-02-15 10:01:51.054 [restartedMain] ERROR o.s.b.d.LoggingFailureAnalysisReporter - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Web server failed to start. Port 8080 was already in use.
+
+Action:
+
+Identify and stop the process that's listening on port 8080 or configure this application to listen on another port.
+
+2024-02-15 10:02:38.121 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.1.Final
+2024-02-15 10:02:38.171 [restartedMain] INFO  c.i.t.TaskManagementApiApplication - Starting TaskManagementApiApplication using Java 21.0.1 with PID 13908 (C:\Users\IsaacAgbobli\OneDrive - AmaliTech gGmbH\Desktop\Project\calculator\task-management-api\target\classes started by IsaacAgbobli in C:\Users\IsaacAgbobli\OneDrive - AmaliTech gGmbH\Desktop\Project\calculator\task-management-api)
+2024-02-15 10:02:38.173 [restartedMain] INFO  c.i.t.TaskManagementApiApplication - No active profile set, falling back to 1 default profile: "default"
+2024-02-15 10:02:38.246 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2024-02-15 10:02:38.246 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2024-02-15 10:02:38.275 [restartedMain] INFO  o.s.b.d.c.l.DockerComposeLifecycleManager - Using Docker Compose file 'C:\Users\IsaacAgbobli\OneDrive - AmaliTech gGmbH\Desktop\Project\calculator\task-management-api\compose.yaml'
+2024-02-15 10:02:40.739 [restartedMain] INFO  o.s.b.d.c.l.DockerComposeLifecycleManager - There are already Docker Compose services running, skipping startup
+2024-02-15 10:02:42.045 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-02-15 10:02:42.163 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 107 ms. Found 3 JPA repository interfaces.
+2024-02-15 10:02:43.229 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2024-02-15 10:02:43.245 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2024-02-15 10:02:43.248 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2024-02-15 10:02:43.249 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.18]
+2024-02-15 10:02:43.338 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2024-02-15 10:02:43.338 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2588 ms
+2024-02-15 10:02:43.642 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-02-15 10:02:43.742 [restartedMain] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.4.1.Final
+2024-02-15 10:02:43.798 [restartedMain] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2024-02-15 10:02:44.257 [restartedMain] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-02-15 10:02:44.294 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2024-02-15 10:02:44.496 [restartedMain] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@3476354f
+2024-02-15 10:02:44.498 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2024-02-15 10:02:44.533 [restartedMain] WARN  org.hibernate.orm.deprecation - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-02-15 10:02:45.960 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-02-15 10:02:46.109 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-02-15 10:02:46.912 [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-02-15 10:02:47.345 [restartedMain] INFO  o.s.s.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@28b341d2, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@3251bf27, org.springframework.security.web.context.SecurityContextHolderFilter@7c3ce36c, org.springframework.security.web.header.HeaderWriterFilter@1dc1d6f, org.springframework.web.filter.CorsFilter@5315a48f, org.springframework.security.web.authentication.logout.LogoutFilter@278a1ee8, com.isaac.taskmanagementapi.config.filter.JwtRequestFilter@5f58343e, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@59740f4, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@5e4541df, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@be8a408, org.springframework.security.web.session.SessionManagementFilter@7ca96fb7, org.springframework.security.web.access.ExceptionTranslationFilter@28501a20, org.springframework.security.web.access.intercept.AuthorizationFilter@7e63e8da]
+2024-02-15 10:02:47.806 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2024-02-15 10:02:47.839 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2024-02-15 10:02:47.863 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path ''
+2024-02-15 10:02:47.878 [restartedMain] INFO  c.i.t.TaskManagementApiApplication - Started TaskManagementApiApplication in 10.25 seconds (process running for 11.689)
+2024-02-15 10:02:55.448 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-02-15 10:02:55.448 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2024-02-15 10:02:55.449 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2024-02-15 10:02:56.618 [http-nio-8080-exec-4] INFO  o.s.api.AbstractOpenApiResource - Init duration for springdoc-openapi is: 714 ms
+2024-02-15 11:04:13.983 [File Watcher] INFO  o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener - Restarting due to 1 class path change (0 additions, 1 deletion, 0 modifications)
+2024-02-15 11:04:13.995 [Thread-17] INFO  o.a.coyote.http11.Http11NioProtocol - Stopping ProtocolHandler ["http-nio-8080"]
+2024-02-15 11:04:14.010 [Thread-17] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-02-15 11:04:14.021 [Thread-17] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2024-02-15 11:04:14.043 [Thread-17] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2024-02-15 11:04:14.288 [restartedMain] INFO  c.i.t.TaskManagementApiApplication - Starting TaskManagementApiApplication using Java 21.0.1 with PID 13908 (C:\Users\IsaacAgbobli\OneDrive - AmaliTech gGmbH\Desktop\Project\calculator\task-management-api\target\classes started by IsaacAgbobli in C:\Users\IsaacAgbobli\OneDrive - AmaliTech gGmbH\Desktop\Project\calculator\task-management-api)
+2024-02-15 11:04:14.288 [restartedMain] INFO  c.i.t.TaskManagementApiApplication - No active profile set, falling back to 1 default profile: "default"
+2024-02-15 11:04:14.300 [restartedMain] INFO  o.s.b.d.c.l.DockerComposeLifecycleManager - Using Docker Compose file 'C:\Users\IsaacAgbobli\OneDrive - AmaliTech gGmbH\Desktop\Project\calculator\task-management-api\compose.yaml'
+2024-02-15 11:04:17.506 [restartedMain] INFO  o.s.b.d.c.l.DockerComposeLifecycleManager - There are already Docker Compose services running, skipping startup
+2024-02-15 11:04:18.685 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-02-15 11:04:18.740 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 55 ms. Found 3 JPA repository interfaces.
+2024-02-15 11:04:19.061 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2024-02-15 11:04:19.065 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2024-02-15 11:04:19.065 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2024-02-15 11:04:19.066 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.18]
+2024-02-15 11:04:19.109 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2024-02-15 11:04:19.109 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1599 ms
+2024-02-15 11:04:19.142 [restartedMain] ERROR o.s.b.w.e.tomcat.TomcatStarter - Error starting Tomcat context. Exception: org.springframework.beans.factory.BeanCreationException. Message: Error creating bean with name 'jwtRequestFilter' defined in file [C:\Users\IsaacAgbobli\OneDrive - AmaliTech gGmbH\Desktop\Project\calculator\task-management-api\target\classes\com\isaac\taskmanagementapi\config\filter\JwtRequestFilter.class]: Failed to instantiate [com.isaac.taskmanagementapi.config.filter.JwtRequestFilter]: Constructor threw exception
+2024-02-15 11:04:19.144 [restartedMain] INFO  o.a.catalina.core.StandardService - Stopping service [Tomcat]
+2024-02-15 11:04:19.148 [restartedMain] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Unable to start web server
+2024-02-15 11:04:19.160 [restartedMain] INFO  o.s.b.a.l.ConditionEvaluationReportLogger - 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2024-02-15 11:04:19.205 [restartedMain] ERROR o.s.boot.SpringApplication - Application run failed
+org.springframework.context.ApplicationContextException: Unable to start web server
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.onRefresh(ServletWebServerApplicationContext.java:165)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:618)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:456)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:334)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1354)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1343)
+	at com.isaac.taskmanagementapi.TaskManagementApiApplication.main(TaskManagementApiApplication.java:12)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:50)
+Caused by: org.springframework.boot.web.server.WebServerException: Unable to start embedded Tomcat
+	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.initialize(TomcatWebServer.java:145)
+	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.<init>(TomcatWebServer.java:105)
+	at org.springframework.boot.web.embedded.tomcat.TomcatServletWebServerFactory.getTomcatWebServer(TomcatServletWebServerFactory.java:499)
+	at org.springframework.boot.web.embedded.tomcat.TomcatServletWebServerFactory.getWebServer(TomcatServletWebServerFactory.java:218)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.createWebServer(ServletWebServerApplicationContext.java:188)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.onRefresh(ServletWebServerApplicationContext.java:162)
+	... 11 common frames omitted
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'jwtRequestFilter' defined in file [C:\Users\IsaacAgbobli\OneDrive - AmaliTech gGmbH\Desktop\Project\calculator\task-management-api\target\classes\com\isaac\taskmanagementapi\config\filter\JwtRequestFilter.class]: Failed to instantiate [com.isaac.taskmanagementapi.config.filter.JwtRequestFilter]: Constructor threw exception
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:318)
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:306)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1354)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1191)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:561)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:521)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:325)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:323)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:204)
+	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.getOrderedBeansOfType(ServletContextInitializerBeans.java:210)
+	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.addAsRegistrationBean(ServletContextInitializerBeans.java:173)
+	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.addAsRegistrationBean(ServletContextInitializerBeans.java:168)
+	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.addAdaptableBeans(ServletContextInitializerBeans.java:153)
+	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.<init>(ServletContextInitializerBeans.java:86)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.getServletContextInitializerBeans(ServletWebServerApplicationContext.java:266)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.selfInitialize(ServletWebServerApplicationContext.java:240)
+	at org.springframework.boot.web.embedded.tomcat.TomcatStarter.onStartup(TomcatStarter.java:52)
+	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:4866)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:171)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1332)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1322)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75)
+	at java.base/java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:145)
+	at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:866)
+	at org.apache.catalina.core.StandardHost.startInternal(StandardHost.java:845)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:171)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1332)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1322)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75)
+	at java.base/java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:145)
+	at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:866)
+	at org.apache.catalina.core.StandardEngine.startInternal(StandardEngine.java:240)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:171)
+	at org.apache.catalina.core.StandardService.startInternal(StandardService.java:433)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:171)
+	at org.apache.catalina.core.StandardServer.startInternal(StandardServer.java:917)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:171)
+	at org.apache.catalina.startup.Tomcat.start(Tomcat.java:488)
+	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.initialize(TomcatWebServer.java:126)
+	... 16 common frames omitted
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.isaac.taskmanagementapi.config.filter.JwtRequestFilter]: Constructor threw exception
+	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:223)
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:111)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:315)
+	... 57 common frames omitted
+Caused by: java.lang.Error: Unresolved compilation problems: 
+	The type JwtRequestFilter must implement the inherited abstract method OncePerRequestFilter.doFilterInternal(HttpServletRequest, HttpServletResponse, FilterChain)
+	The method doFilterInternal(HttpServletRequest) of type JwtRequestFilter must override or implement a supertype method
+	Syntax error, insert "... VariableDeclaratorId" to complete FormalParameter
+
+	at com.isaac.taskmanagementapi.config.filter.JwtRequestFilter.<init>(JwtRequestFilter.java:25)
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
+	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:210)
+	... 59 common frames omitted
+2024-02-15 11:04:20.813 [restartedMain] INFO  c.i.t.TaskManagementApiApplication - Starting TaskManagementApiApplication using Java 21.0.1 with PID 13908 (C:\Users\IsaacAgbobli\OneDrive - AmaliTech gGmbH\Desktop\Project\calculator\task-management-api\target\classes started by IsaacAgbobli in C:\Users\IsaacAgbobli\OneDrive - AmaliTech gGmbH\Desktop\Project\calculator\task-management-api)
+2024-02-15 11:04:20.813 [restartedMain] INFO  c.i.t.TaskManagementApiApplication - No active profile set, falling back to 1 default profile: "default"
+2024-02-15 11:04:20.821 [restartedMain] INFO  o.s.b.d.c.l.DockerComposeLifecycleManager - Using Docker Compose file 'C:\Users\IsaacAgbobli\OneDrive - AmaliTech gGmbH\Desktop\Project\calculator\task-management-api\compose.yaml'
+2024-02-15 11:04:22.728 [restartedMain] INFO  o.s.b.d.c.l.DockerComposeLifecycleManager - There are already Docker Compose services running, skipping startup
+2024-02-15 11:04:23.273 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-02-15 11:04:23.314 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 40 ms. Found 3 JPA repository interfaces.
+2024-02-15 11:04:23.514 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2024-02-15 11:04:23.517 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2024-02-15 11:04:23.517 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2024-02-15 11:04:23.517 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.18]
+2024-02-15 11:04:23.547 [restartedMain] INFO  o.a.c.c.C.[Tomcat-1].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2024-02-15 11:04:23.548 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 817 ms
+2024-02-15 11:04:23.568 [restartedMain] ERROR o.s.b.w.e.tomcat.TomcatStarter - Error starting Tomcat context. Exception: org.springframework.beans.factory.BeanCreationException. Message: Error creating bean with name 'jwtRequestFilter' defined in file [C:\Users\IsaacAgbobli\OneDrive - AmaliTech gGmbH\Desktop\Project\calculator\task-management-api\target\classes\com\isaac\taskmanagementapi\config\filter\JwtRequestFilter.class]: Failed to instantiate [com.isaac.taskmanagementapi.config.filter.JwtRequestFilter]: Constructor threw exception
+2024-02-15 11:04:23.570 [restartedMain] INFO  o.a.catalina.core.StandardService - Stopping service [Tomcat]
+2024-02-15 11:04:23.572 [restartedMain] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Unable to start web server
+2024-02-15 11:04:23.576 [restartedMain] INFO  o.s.b.a.l.ConditionEvaluationReportLogger - 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2024-02-15 11:04:23.582 [restartedMain] ERROR o.s.boot.SpringApplication - Application run failed
+org.springframework.context.ApplicationContextException: Unable to start web server
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.onRefresh(ServletWebServerApplicationContext.java:165)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:618)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:456)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:334)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1354)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1343)
+	at com.isaac.taskmanagementapi.TaskManagementApiApplication.main(TaskManagementApiApplication.java:12)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:50)
+Caused by: org.springframework.boot.web.server.WebServerException: Unable to start embedded Tomcat
+	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.initialize(TomcatWebServer.java:145)
+	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.<init>(TomcatWebServer.java:105)
+	at org.springframework.boot.web.embedded.tomcat.TomcatServletWebServerFactory.getTomcatWebServer(TomcatServletWebServerFactory.java:499)
+	at org.springframework.boot.web.embedded.tomcat.TomcatServletWebServerFactory.getWebServer(TomcatServletWebServerFactory.java:218)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.createWebServer(ServletWebServerApplicationContext.java:188)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.onRefresh(ServletWebServerApplicationContext.java:162)
+	... 11 common frames omitted
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'jwtRequestFilter' defined in file [C:\Users\IsaacAgbobli\OneDrive - AmaliTech gGmbH\Desktop\Project\calculator\task-management-api\target\classes\com\isaac\taskmanagementapi\config\filter\JwtRequestFilter.class]: Failed to instantiate [com.isaac.taskmanagementapi.config.filter.JwtRequestFilter]: Constructor threw exception
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:318)
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:306)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1354)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1191)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:561)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:521)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:325)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:323)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:204)
+	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.getOrderedBeansOfType(ServletContextInitializerBeans.java:210)
+	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.addAsRegistrationBean(ServletContextInitializerBeans.java:173)
+	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.addAsRegistrationBean(ServletContextInitializerBeans.java:168)
+	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.addAdaptableBeans(ServletContextInitializerBeans.java:153)
+	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.<init>(ServletContextInitializerBeans.java:86)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.getServletContextInitializerBeans(ServletWebServerApplicationContext.java:266)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.selfInitialize(ServletWebServerApplicationContext.java:240)
+	at org.springframework.boot.web.embedded.tomcat.TomcatStarter.onStartup(TomcatStarter.java:52)
+	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:4866)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:171)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1332)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1322)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75)
+	at java.base/java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:145)
+	at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:866)
+	at org.apache.catalina.core.StandardHost.startInternal(StandardHost.java:845)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:171)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1332)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1322)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75)
+	at java.base/java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:145)
+	at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:866)
+	at org.apache.catalina.core.StandardEngine.startInternal(StandardEngine.java:240)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:171)
+	at org.apache.catalina.core.StandardService.startInternal(StandardService.java:433)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:171)
+	at org.apache.catalina.core.StandardServer.startInternal(StandardServer.java:917)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:171)
+	at org.apache.catalina.startup.Tomcat.start(Tomcat.java:488)
+	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.initialize(TomcatWebServer.java:126)
+	... 16 common frames omitted
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.isaac.taskmanagementapi.config.filter.JwtRequestFilter]: Constructor threw exception
+	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:223)
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:111)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:315)
+	... 57 common frames omitted
+Caused by: java.lang.Error: Unresolved compilation problems: 
+	The type JwtRequestFilter must implement the inherited abstract method OncePerRequestFilter.doFilterInternal(HttpServletRequest, HttpServletResponse, FilterChain)
+	The method doFilterInternal(HttpServletRequest) of type JwtRequestFilter must override or implement a supertype method
+	Syntax error, insert "... VariableDeclaratorId" to complete FormalParameter
+
+	at com.isaac.taskmanagementapi.config.filter.JwtRequestFilter.<init>(JwtRequestFilter.java:25)
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
+	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:210)
+	... 59 common frames omitted
+2024-02-15 11:05:41.820 [restartedMain] INFO  c.i.t.TaskManagementApiApplication - Starting TaskManagementApiApplication using Java 21.0.1 with PID 13908 (C:\Users\IsaacAgbobli\OneDrive - AmaliTech gGmbH\Desktop\Project\calculator\task-management-api\target\classes started by IsaacAgbobli in C:\Users\IsaacAgbobli\OneDrive - AmaliTech gGmbH\Desktop\Project\calculator\task-management-api)
+2024-02-15 11:05:41.821 [restartedMain] INFO  c.i.t.TaskManagementApiApplication - No active profile set, falling back to 1 default profile: "default"
+2024-02-15 11:05:41.828 [restartedMain] INFO  o.s.b.d.c.l.DockerComposeLifecycleManager - Using Docker Compose file 'C:\Users\IsaacAgbobli\OneDrive - AmaliTech gGmbH\Desktop\Project\calculator\task-management-api\compose.yaml'
+2024-02-15 11:05:43.598 [restartedMain] INFO  o.s.b.d.c.l.DockerComposeLifecycleManager - There are already Docker Compose services running, skipping startup
+2024-02-15 11:05:44.128 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-02-15 11:05:44.166 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 38 ms. Found 3 JPA repository interfaces.
+2024-02-15 11:05:44.350 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2024-02-15 11:05:44.351 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2024-02-15 11:05:44.351 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2024-02-15 11:05:44.351 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.18]
+2024-02-15 11:05:44.383 [restartedMain] INFO  o.a.c.c.C.[Tomcat-2].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2024-02-15 11:05:44.384 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 783 ms
+2024-02-15 11:05:44.483 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-02-15 11:05:44.489 [restartedMain] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2024-02-15 11:05:44.495 [restartedMain] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-02-15 11:05:44.497 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Starting...
+2024-02-15 11:05:44.558 [restartedMain] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-2 - Added connection org.postgresql.jdbc.PgConnection@239c9e84
+2024-02-15 11:05:44.558 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Start completed.
+2024-02-15 11:05:44.564 [restartedMain] WARN  org.hibernate.orm.deprecation - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-02-15 11:05:44.696 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-02-15 11:05:45.232 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-02-15 11:05:45.616 [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-02-15 11:05:45.822 [restartedMain] INFO  o.s.s.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@4fa983bd, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@36534332, org.springframework.security.web.context.SecurityContextHolderFilter@5725bed, org.springframework.security.web.header.HeaderWriterFilter@7d234530, org.springframework.web.filter.CorsFilter@62da9711, org.springframework.security.web.authentication.logout.LogoutFilter@77f68297, com.isaac.taskmanagementapi.config.filter.JwtRequestFilter@461f8981, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@1cc5ba7a, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@7ba86617, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@2c480519, org.springframework.security.web.session.SessionManagementFilter@6af8023e, org.springframework.security.web.access.ExceptionTranslationFilter@32d56f66, org.springframework.security.web.access.intercept.AuthorizationFilter@c084a91]
+2024-02-15 11:05:46.016 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2024-02-15 11:05:46.034 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2024-02-15 11:05:46.037 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path ''
+2024-02-15 11:05:46.043 [restartedMain] INFO  c.i.t.TaskManagementApiApplication - Started TaskManagementApiApplication in 4.274 seconds (process running for 3789.854)
+2024-02-15 11:05:46.045 [restartedMain] INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
+2024-02-15 11:09:36.642 [File Watcher] INFO  o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener - Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2024-02-15 11:09:36.644 [Thread-19] INFO  o.a.coyote.http11.Http11NioProtocol - Stopping ProtocolHandler ["http-nio-8080"]
+2024-02-15 11:09:36.650 [Thread-19] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-02-15 11:09:36.651 [Thread-19] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Shutdown initiated...
+2024-02-15 11:09:36.656 [Thread-19] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Shutdown completed.
+2024-02-15 11:09:36.853 [restartedMain] INFO  c.i.t.TaskManagementApiApplication - Starting TaskManagementApiApplication using Java 21.0.1 with PID 13908 (C:\Users\IsaacAgbobli\OneDrive - AmaliTech gGmbH\Desktop\Project\calculator\task-management-api\target\classes started by IsaacAgbobli in C:\Users\IsaacAgbobli\OneDrive - AmaliTech gGmbH\Desktop\Project\calculator\task-management-api)
+2024-02-15 11:09:36.854 [restartedMain] INFO  c.i.t.TaskManagementApiApplication - No active profile set, falling back to 1 default profile: "default"
+2024-02-15 11:09:36.863 [restartedMain] INFO  o.s.b.d.c.l.DockerComposeLifecycleManager - Using Docker Compose file 'C:\Users\IsaacAgbobli\OneDrive - AmaliTech gGmbH\Desktop\Project\calculator\task-management-api\compose.yaml'
+2024-02-15 11:09:38.546 [restartedMain] INFO  o.s.b.d.c.l.DockerComposeLifecycleManager - There are already Docker Compose services running, skipping startup
+2024-02-15 11:09:39.053 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-02-15 11:09:39.093 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 39 ms. Found 3 JPA repository interfaces.
+2024-02-15 11:09:39.362 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2024-02-15 11:09:39.365 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2024-02-15 11:09:39.365 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2024-02-15 11:09:39.365 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.18]
+2024-02-15 11:09:39.404 [restartedMain] INFO  o.a.c.c.C.[Tomcat-2].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2024-02-15 11:09:39.405 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 857 ms
+2024-02-15 11:09:39.518 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-02-15 11:09:39.525 [restartedMain] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2024-02-15 11:09:39.531 [restartedMain] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-02-15 11:09:39.532 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-3 - Starting...
+2024-02-15 11:09:39.591 [restartedMain] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Added connection org.postgresql.jdbc.PgConnection@17db3956
+2024-02-15 11:09:39.591 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-3 - Start completed.
+2024-02-15 11:09:39.596 [restartedMain] WARN  org.hibernate.orm.deprecation - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-02-15 11:09:39.700 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-02-15 11:09:39.793 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-02-15 11:09:40.303 [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-02-15 11:09:40.541 [restartedMain] INFO  o.s.s.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@66168efa, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@26c5d1fd, org.springframework.security.web.context.SecurityContextHolderFilter@7ad90815, org.springframework.security.web.header.HeaderWriterFilter@21e38442, org.springframework.web.filter.CorsFilter@5f21f635, org.springframework.security.web.authentication.logout.LogoutFilter@57b02301, com.isaac.taskmanagementapi.config.filter.JwtRequestFilter@436952c6, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@5fe19066, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@629dce4c, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@2fe7a86f, org.springframework.security.web.session.SessionManagementFilter@3e5d57d7, org.springframework.security.web.access.ExceptionTranslationFilter@41cc8a32, org.springframework.security.web.access.intercept.AuthorizationFilter@30e81bcd]
+2024-02-15 11:09:40.764 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2024-02-15 11:09:40.788 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2024-02-15 11:09:40.793 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path ''
+2024-02-15 11:09:40.797 [restartedMain] INFO  c.i.t.TaskManagementApiApplication - Started TaskManagementApiApplication in 3.999 seconds (process running for 4024.608)
+2024-02-15 11:09:40.799 [restartedMain] INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
+2024-02-15 11:53:57.529 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-02-15 11:53:57.531 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-3 - Shutdown initiated...
+2024-02-15 11:53:57.538 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-3 - Shutdown completed.

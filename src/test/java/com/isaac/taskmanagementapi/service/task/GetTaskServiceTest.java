@@ -23,7 +23,7 @@ import static org.junit.jupiter.api.Assertions.*;
 import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.Mockito.*;
 
-public class GetTaskServiceTest {
+class GetTaskServiceTest {
 
     @InjectMocks
     private GetTaskService getTaskService;
@@ -37,7 +37,7 @@ public class GetTaskServiceTest {
     }
 
  @Test
-public void getTasksCreatedByUserSuccessfully() {
+ void getTasksCreatedByUserSuccessfully() {
     User user = new User();
     user.setId(1);
 
@@ -60,7 +60,7 @@ public void getTasksCreatedByUserSuccessfully() {
 }
 
     @Test
-    public void getTasksAssignedToUserSuccessfully() {
+    void getTasksAssignedToUserSuccessfully() {
         User user = new User();
         user.setId(1);
 
@@ -83,7 +83,7 @@ public void getTasksCreatedByUserSuccessfully() {
     }
 
     @Test
-    public void getTaskByIdSuccessfully() {
+    void getTaskByIdSuccessfully() {
         User user = new User();
         user.setId(1);
 
@@ -104,7 +104,7 @@ public void getTasksCreatedByUserSuccessfully() {
     }
 
     @Test
-    public void getTaskByIdUnauthorized() {
+    void getTaskByIdUnauthorized() {
         User user = new User();
         user.setId(1);
 

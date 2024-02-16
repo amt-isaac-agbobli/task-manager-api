@@ -21,7 +21,7 @@ import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.ArgumentMatchers.anyString;
 import static org.mockito.Mockito.*;
 
-public class ResetPasswordServiceTest {
+class ResetPasswordServiceTest {
 
     @Mock
     private PasswordRepository passwordRepository;
@@ -36,7 +36,7 @@ public class ResetPasswordServiceTest {
     private ResetPasswordService resetPasswordService;
 
     @BeforeEach
-    public void setup() {
+    void setup() {
         MockitoAnnotations.openMocks(this);
     }
 
@@ -62,7 +62,7 @@ public class ResetPasswordServiceTest {
 //    }
 
     @Test
-    public void resetPasswordWithInvalidToken() {
+    void resetPasswordWithInvalidToken() {
         when(passwordRepository.findByToken(anyString())).thenReturn(null);
 
         ResetPasswordRequest request = new ResetPasswordRequest();
@@ -72,7 +72,7 @@ public class ResetPasswordServiceTest {
     }
 
     @Test
-    public void resetPasswordWithExpiredToken() {
+    void resetPasswordWithExpiredToken() {
         ResetPasswordToken resetPasswordToken = new ResetPasswordToken();
         resetPasswordToken.setExpiryDate(new Date(System.currentTimeMillis() - 10000));
         resetPasswordToken.setEmail("test@test.com");

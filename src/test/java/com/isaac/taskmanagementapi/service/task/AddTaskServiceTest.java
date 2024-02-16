@@ -21,7 +21,7 @@ import static org.junit.jupiter.api.Assertions.*;
 import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.Mockito.*;
 
-public class AddTaskServiceTest {
+class AddTaskServiceTest {
 
     @InjectMocks
     private AddTaskService addTaskService;
@@ -36,12 +36,12 @@ public class AddTaskServiceTest {
     private EmailService emailService;
 
     @BeforeEach
-    public void setup() {
+    void setup() {
         MockitoAnnotations.openMocks(this);
     }
 
     @Test
-    public void addTaskSuccessfully() {
+    void addTaskSuccessfully() {
         User user = new User();
         user.setId(1);
         user.setEmail("test@test.com");
@@ -64,7 +64,7 @@ public class AddTaskServiceTest {
     }
 
     @Test
-    public void addTaskWithNonExistentUser() {
+    void addTaskWithNonExistentUser() {
         User user = new User();
         user.setId(1);
 

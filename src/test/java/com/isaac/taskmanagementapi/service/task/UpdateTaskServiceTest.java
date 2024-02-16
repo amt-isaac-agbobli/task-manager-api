@@ -20,7 +20,7 @@ import static org.junit.jupiter.api.Assertions.*;
 import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.Mockito.*;
 
-public class UpdateTaskServiceTest {
+class UpdateTaskServiceTest {
 
     @InjectMocks
     private UpdateTaskService updateTaskService;
@@ -35,12 +35,12 @@ public class UpdateTaskServiceTest {
     private EmailService emailService;
 
     @BeforeEach
-    public void setup() {
+    void setup() {
         MockitoAnnotations.openMocks(this);
     }
 
     @Test
-    public void updateTaskSuccessfully() {
+    void updateTaskSuccessfully() {
         User user = new User();
         user.setId(1);
 
@@ -66,7 +66,7 @@ public class UpdateTaskServiceTest {
     }
 
     @Test
-    public void updateTaskStatusSuccessfully() {
+    void updateTaskStatusSuccessfully() {
         User user = new User();
         user.setId(1);
 
@@ -88,7 +88,7 @@ public class UpdateTaskServiceTest {
     }
 
     @Test
-    public void reassignTaskSuccessfully() {
+    void reassignTaskSuccessfully() {
         User user = new User();
         user.setId(1);
 
@@ -116,7 +116,7 @@ public class UpdateTaskServiceTest {
     }
 
     @Test
-    public void deleteTaskSuccessfully() {
+    void deleteTaskSuccessfully() {
         User user = new User();
         user.setId(1);
 

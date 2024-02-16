@@ -21,7 +21,7 @@ import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.ArgumentMatchers.anyString;
 import static org.mockito.Mockito.*;
 
-public class AuthServiceTest {
+class AuthServiceTest {
 
     @Mock
     private UserService userService;
@@ -44,7 +44,7 @@ public class AuthServiceTest {
     }
 
     @Test
-    public void signUpSuccessfully() {
+    void signUpSuccessfully() {
         when(userRepository.findByEmail(anyString())).thenReturn(null);
         when(passwordEncoder.encode(anyString())).thenReturn("encodedPassword");
         when(userRepository.save(any(User.class))).thenAnswer(i -> i.getArguments()[0]);
@@ -62,7 +62,7 @@ public class AuthServiceTest {
     }
 
     @Test
-    public void signUpWithExistingUser() {
+    void signUpWithExistingUser() {
         when(userRepository.findByEmail(anyString())).thenReturn(new User());
 
         SignUpUserRequest request = new SignUpUserRequest();
@@ -74,7 +74,7 @@ public class AuthServiceTest {
     }
 
     @Test
-    public void signInSuccessfully() {
+    void signInSuccessfully() {
         User user = new User();
         user.setEmail("test@test.com");
         user.setPassword("encodedPassword");
@@ -92,7 +92,7 @@ public class AuthServiceTest {
     }
 
     @Test
-    public void signInWithNonExistingUser() {
+    void signInWithNonExistingUser() {
         when(userRepository.findByEmail(anyString())).thenReturn(null);
 
         SignInRequest request = new SignInRequest();
@@ -103,7 +103,7 @@ public class AuthServiceTest {
     }
 
     @Test
-    public void signInWithInvalidCredentials() {
+    void signInWithInvalidCredentials() {
         User user = new User();
         user.setEmail("test@test.com");
         user.setPassword("encodedPassword");

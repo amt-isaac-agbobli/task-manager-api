@@ -21,7 +21,7 @@ import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.ArgumentMatchers.anyString;
 import static org.mockito.Mockito.*;
 
-public class ForgetPasswordServiceTest {
+class ForgetPasswordServiceTest {
 
     @Mock
     private PasswordRepository passwordRepository;
@@ -41,7 +41,7 @@ public class ForgetPasswordServiceTest {
     }
 
     @Test
-    public void forgotPasswordSuccessfully() {
+    void forgotPasswordSuccessfully() {
         User user = new User();
         when(userRepository.findByEmail(anyString())).thenReturn(user);
         when(passwordRepository.findByEmail(anyString())).thenReturn(null);
@@ -57,7 +57,7 @@ public class ForgetPasswordServiceTest {
     }
 
     @Test
-    public void forgotPasswordWithNonRegisteredUser() {
+    void forgotPasswordWithNonRegisteredUser() {
         when(userRepository.findByEmail(anyString())).thenReturn(null);
 
         ForgetPasswordRequest request = new ForgetPasswordRequest();
@@ -67,7 +67,7 @@ public class ForgetPasswordServiceTest {
     }
 
     @Test
-    public void forgotPasswordWithExistingResetToken() {
+    void forgotPasswordWithExistingResetToken() {
         User user = new User();
         when(userRepository.findByEmail(anyString())).thenReturn(user);
 

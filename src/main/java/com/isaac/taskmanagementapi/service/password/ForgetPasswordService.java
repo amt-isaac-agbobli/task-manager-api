@@ -34,7 +34,7 @@ public class ForgetPasswordService implements IForgetPasswordService {
 
 
     public Object forgotPassword(ForgetPasswordRequest forgetPasswordRequest) {
-        User user = findUserByEmail(forgetPasswordRequest.getEmail());
+        findUserByEmail(forgetPasswordRequest.getEmail());
         String token = generateToken();
         Date expiryDate = calculateExpiryDate();
 
@@ -46,12 +46,11 @@ public class ForgetPasswordService implements IForgetPasswordService {
         return Map.of("message", "Email sent successfully");
     }
 
-    private User findUserByEmail(String email) {
+    private void findUserByEmail(String email) {
         User user = userRepository.findByEmail(email);
         if (user == null) {
             throw new HttpException("User is not registered in the system", HttpStatus.NOT_FOUND);
         }
-        return user;
     }
 
     private String generateToken() {

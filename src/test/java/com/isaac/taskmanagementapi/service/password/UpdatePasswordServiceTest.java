@@ -17,7 +17,7 @@ import static org.junit.jupiter.api.Assertions.*;
 import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.Mockito.*;
 
-public class UpdatePasswordServiceTest {
+class UpdatePasswordServiceTest {
 
     @Mock
     private UserRepository userRepository;
@@ -29,12 +29,12 @@ public class UpdatePasswordServiceTest {
     private UpdatePasswordService updatePasswordService;
 
     @BeforeEach
-    public void setup() {
+    void setup() {
         MockitoAnnotations.openMocks(this);
     }
 
     @Test
-    public void updateUserPasswordSuccessfully() {
+    void updateUserPasswordSuccessfully() {
         User user = new User();
         user.setPassword("oldPassword");
         when(userRepository.findByEmail(anyString())).thenReturn(user);
@@ -50,7 +50,7 @@ public class UpdatePasswordServiceTest {
     }
 
     @Test
-    public void updateUserPasswordWithNonExistingUser() {
+    void updateUserPasswordWithNonExistingUser() {
         when(userRepository.findByEmail(anyString())).thenReturn(null);
 
         UpdatePasswordRequest request = new UpdatePasswordRequest();
@@ -62,7 +62,7 @@ public class UpdatePasswordServiceTest {
     }
 
     @Test
-    public void updateUserPasswordWithIncorrectOldPassword() {
+    void updateUserPasswordWithIncorrectOldPassword() {
         User user = new User();
         user.setPassword("oldPassword");
         when(userRepository.findByEmail(anyString())).thenReturn(user);
@@ -77,7 +77,7 @@ public class UpdatePasswordServiceTest {
     }
 
     @Test
-    public void updateUserPasswordWithNonMatchingNewPasswords() {
+    void updateUserPasswordWithNonMatchingNewPasswords() {
         User user = new User();
         user.setPassword("oldPassword");
         when(userRepository.findByEmail(anyString())).thenReturn(user);
