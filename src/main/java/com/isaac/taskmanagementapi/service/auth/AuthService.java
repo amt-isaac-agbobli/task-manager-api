@@ -6,7 +6,6 @@ import com.isaac.taskmanagementapi.entity.User;
 import com.isaac.taskmanagementapi.exception.HttpException;
 import com.isaac.taskmanagementapi.repository.UserRepository;
 import com.isaac.taskmanagementapi.service.auth.interfaces.IAuthService;
-import com.isaac.taskmanagementapi.service.user.UserService;
 import com.isaac.taskmanagementapi.util.jwt.CreateJwtService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -17,18 +16,16 @@ import java.util.Map;
 
 @Service
 public class AuthService implements IAuthService {
-    private final UserService userService;
+
     private final UserRepository userRepository;
     private final PasswordEncoder passwordEncoder;
 
     private final CreateJwtService createJWTService;
 
     @Autowired
-    public AuthService(UserService userService,
-                       UserRepository userRepository,
+    public AuthService(UserRepository userRepository,
                        PasswordEncoder passwordEncoder,
                        CreateJwtService createJWTService) {
-        this.userService = userService;
         this.userRepository = userRepository;
         this.passwordEncoder = passwordEncoder;
         this.createJWTService = createJWTService;

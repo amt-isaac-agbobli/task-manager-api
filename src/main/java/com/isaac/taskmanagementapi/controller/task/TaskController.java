@@ -63,8 +63,7 @@ public class TaskController {
     @Operation(description = "Update a task status")
     public ResponseEntity<Object> updateTaskStatus(@Valid @PathVariable("id") int id,
                                                   @Valid @RequestParam("status") String status) {
-        User user = authenticatedUser();
-        return ResponseEntity.ok().body(updateTaskService.updateTaskStatus(id, user.getId(), status));
+        return ResponseEntity.ok().body(updateTaskService.updateTaskStatus(id, status));
     }
     @GetMapping("/my-tasks")
     @Operation(description = "Get tasks created by user")

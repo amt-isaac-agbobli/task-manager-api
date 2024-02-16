@@ -27,7 +27,7 @@ public class CreateJwtService implements ICreateJwtService {
         return JWT.create().withIssuer("Task-Manager-API")
                 .withSubject(user.getEmail())
                 .withClaim("id", user.getId())
-                .withExpiresAt(_getExpirationDate())
+                .withExpiresAt(getExpirationDate())
                 .sign(algorithm);
     }
 
@@ -36,7 +36,7 @@ public class CreateJwtService implements ICreateJwtService {
      *
      * @return Instant object containing the expiration date
      */
-    private Instant _getExpirationDate() {
+    private Instant getExpirationDate() {
         return LocalDateTime.now().plusHours(2).toInstant(ZoneOffset.of("-03:00"));
     }
 }

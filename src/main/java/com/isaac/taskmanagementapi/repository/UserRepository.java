@@ -9,6 +9,4 @@ public interface UserRepository extends JpaRepository<User, Integer> {
     User findByEmail(String email);
     Page<User> findByEmail(String email, Pageable pageable);
 
-
-
 }

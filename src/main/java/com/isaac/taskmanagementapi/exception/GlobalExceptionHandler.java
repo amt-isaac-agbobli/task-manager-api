@@ -5,7 +5,6 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.validation.FieldError;
 import org.springframework.web.bind.MethodArgumentNotValidException;
 import org.springframework.web.bind.annotation.ControllerAdvice;
-import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.ResponseStatus;
 
 import java.util.HashMap;
@@ -20,17 +19,17 @@ public class GlobalExceptionHandler {
      * @param httpException the exception to handle
      * @return a ResponseEntity with the exception message and HTTP status
      */
-    @ExceptionHandler(value= {HttpException.class})
-    public ResponseEntity<Object> HttpException
+    @org.springframework.web.bind.annotation.ExceptionHandler(value= {HttpException.class})
+    public ResponseEntity<Object> httpException
     (HttpException httpException)
     {
-        Exception Exception = new Exception(
+        ExceptionHandler exceptionHandler = new ExceptionHandler(
                 httpException.getMessage(),
                 httpException.getCause(),
                 httpException.getHttpStatus()
         );
 
-        return new ResponseEntity<>(Exception, httpException.getHttpStatus());
+        return new ResponseEntity<>(exceptionHandler, httpException.getHttpStatus());
     }
 
     /**
@@ -41,7 +40,7 @@ public class GlobalExceptionHandler {
      * @return a ResponseEntity with the validation errors and HTTP status
      */
     @ResponseStatus(HttpStatus.BAD_REQUEST)
-    @ExceptionHandler(MethodArgumentNotValidException.class)
+    @org.springframework.web.bind.annotation.ExceptionHandler(MethodArgumentNotValidException.class)
     public ResponseEntity<Object> handleValidationExceptions(MethodArgumentNotValidException ex) {
 
         Map<String, String> errors = new HashMap<>();

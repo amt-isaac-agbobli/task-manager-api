@@ -80,7 +80,7 @@ class UpdateTaskServiceTest {
 
         when(taskRepository.findById(anyInt())).thenReturn(Optional.of(task));
 
-        Object response = updateTaskService.updateTaskStatus(1, 1, "COMPLETED");
+        Object response = updateTaskService.updateTaskStatus(1, "COMPLETED");
 
         verify(taskRepository, times(1)).save(any(Task.class));
 
